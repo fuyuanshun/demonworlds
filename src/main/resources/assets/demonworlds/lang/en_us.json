@@ -1,0 +1,13 @@
+{
+  "itemGroup.demonworlds": "Example Mod Tab",
+  "block.demonworlds.example_block": "Example Block",
+  "item.demonworlds.example_item": "Example Item",
+
+  "demonworlds.configuration.title": "demon-worlds Configs",
+  "demonworlds.configuration.section.demonworlds.common.toml": "demon-worlds Configs",
+  "demonworlds.configuration.section.demonworlds.common.toml.title": "demon-worlds Configs",
+  "demonworlds.configuration.items": "Item List",
+  "demonworlds.configuration.logDirtBlock": "Log Dirt Block",
+  "demonworlds.configuration.magicNumberIntroduction": "Magic Number Text",
+  "demonworlds.configuration.magicNumber": "Magic Number"
+}
