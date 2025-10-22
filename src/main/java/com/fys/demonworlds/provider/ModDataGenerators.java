@@ -19,6 +19,7 @@ import java.util.concurrent.CompletableFuture;
 @EventBusSubscriber(modid = ModConstants.MOD_ID)
 public class ModDataGenerators {
 
+    //方块注册 blockstate/*.json models/block/*.json models/item/*.json
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event){
         DataGenerator generator = event.getGenerator();
@@ -27,5 +28,6 @@ public class ModDataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
     }
 }
