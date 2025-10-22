@@ -29,10 +29,10 @@ public class Config {
             .comment("What you want the introduction message to be for the magic number")
             .define("magicNumberIntroduction", "The magic number is... ");
 
-    // a list of strings that are treated as resource locations for items
+    // a list of strings that are treated as resource locations for models
     public static final ModConfigSpec.ConfigValue<List<? extends String>> ITEM_STRINGS = BUILDER
-            .comment("A list of items to log on common setup.")
-            .defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), () -> "", Config::validateItemName);
+            .comment("A list of models to log on common setup.")
+            .defineListAllowEmpty("models", List.of("minecraft:iron_ingot"), () -> "", Config::validateItemName);
 
     static final ModConfigSpec SPEC = BUILDER.build();
 

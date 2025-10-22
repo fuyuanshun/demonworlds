@@ -1,7 +1,7 @@
 {
-  "itemGroup.demon_fruit_tab": "Example Mod Tab",
-  "block.demon-worlds.sun_block": "Example Block",
-  "item.demon-worlds.demon_fruit_sun": "Example Item",
+  "itemGroup.demon_fruit_tab": "恶魔果实",
+  "block.demon-worlds.sun_block": "太阳石",
+  "item.demon-worlds.demon_fruit_sun": "太阳之恶魔果实",
 
   "demon-worlds.configuration.title": "demon-worlds Configs",
   "demon-worlds.configuration.section.demon-worlds.common.toml": "demon-worlds Configs",
