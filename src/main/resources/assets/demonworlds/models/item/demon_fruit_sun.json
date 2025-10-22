@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "demonworlds:item/demon_fruit_sun"
-  }
-}
