@@ -1,6 +1,7 @@
 package com.fys.demonworlds.item;
 
 import com.fys.demonworlds.DemonWorlds;
+import com.fys.demonworlds.constants.ModConstants;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -14,7 +15,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
  */
 public class ModCreativeModeTabs {
 
-    public static final DeferredRegister<CreativeModeTab> MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DemonWorlds.MOD_ID);
+    public static final DeferredRegister<CreativeModeTab> MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ModConstants.MOD_ID);
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DEMON_WORLDS_TAB = MODE_TAB.register("demon_worlds_tab",
             ()-> CreativeModeTab.builder()

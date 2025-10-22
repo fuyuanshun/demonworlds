@@ -1,13 +1,13 @@
 {
   "itemGroup.demon_fruit_tab": "Example Mod Tab",
-  "block.demon-worlds.sun_block": "Example Block",
-  "item.demon-worlds.demon_fruit_sun": "Example Item",
+  "block.demonworlds.sun_block": "Example Block",
+  "item.demonworlds.demon_fruit_sun": "Example Item",
 
-  "demon-worlds.configuration.title": "demon-worlds Configs",
-  "demon-worlds.configuration.section.demon-worlds.common.toml": "demon-worlds Configs",
-  "demon-worlds.configuration.section.demon-worlds.common.toml.title": "demon-worlds Configs",
-  "demon-worlds.configuration.items": "Item List",
-  "demon-worlds.configuration.logDirtBlock": "Log Dirt Block",
-  "demon-worlds.configuration.magicNumberIntroduction": "Magic Number Text",
-  "demon-worlds.configuration.magicNumber": "Magic Number"
+  "demonworlds.configuration.title": "demonworlds Configs",
+  "demonworlds.configuration.section.demonworlds.common.toml": "demonworlds Configs",
+  "demonworlds.configuration.section.demonworlds.common.toml.title": "demonworlds Configs",
+  "demonworlds.configuration.items": "Item List",
+  "demonworlds.configuration.logDirtBlock": "Log Dirt Block",
+  "demonworlds.configuration.magicNumberIntroduction": "Magic Number Text",
+  "demonworlds.configuration.magicNumber": "Magic Number"
 }

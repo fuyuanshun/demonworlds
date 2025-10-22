@@ -1,6 +1,6 @@
 package com.fys.demonworlds;
 
-import net.minecraft.client.Minecraft;
+import com.fys.demonworlds.constants.ModConstants;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -10,12 +10,10 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
-// This class will not load on dedicated servers. Accessing client side code from here is safe.
-@Mod(value = DemonWorlds.MOD_ID, dist = Dist.CLIENT)
-// You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-@EventBusSubscriber(modid = DemonWorlds.MOD_ID, value = Dist.CLIENT)
-public class demonworldsClient {
-    public demonworldsClient(ModContainer container) {
+@Mod(value = ModConstants.MOD_ID, dist = Dist.CLIENT)
+@EventBusSubscriber(modid = ModConstants.MOD_ID, value = Dist.CLIENT)
+public class DemonWorldsClient {
+    public DemonWorldsClient(ModContainer container) {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 
