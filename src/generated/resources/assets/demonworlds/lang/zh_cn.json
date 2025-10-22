@@ -1,6 +1,9 @@
 {
   "block.demonworlds.sun_block": "太阳石",
-  "item.demonworlds.demon_fruit_sun": "§6太阳之恶魔果实",
+  "item.demonworlds.demon_fruit_moon": "月亮之恶魔果实",
+  "item.demonworlds.demon_fruit_moon.desc": "§6来自远古恶魔的诅咒-月亮之恶魔",
+  "item.demonworlds.demon_fruit_sun": "太阳之恶魔果实",
+  "item.demonworlds.demon_fruit_sun.desc": "§6来自远古恶魔的诅咒-太阳之恶魔",
   "itemGroup.demon_fruit_tab": "恶魔果实",
   "itemGroup.demon_worlds_tab": "恶魔方块"
 }

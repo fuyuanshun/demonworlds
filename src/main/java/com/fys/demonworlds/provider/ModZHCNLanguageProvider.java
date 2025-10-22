@@ -23,8 +23,13 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         //物品栏
         add("itemGroup.demon_fruit_tab", "恶魔果实");
         add("itemGroup.demon_worlds_tab", "恶魔方块");
-
-        add(ModItems.DEMON_FRUIT_SUN.get(), "\u00A76太阳之恶魔果实");
+        //恶魔果实
+        add(ModItems.DEMON_FRUIT_SUN.get(), "太阳之恶魔果实");
+        add(ModItems.DEMON_FRUIT_MOON.get(), "月亮之恶魔果实");
+        //方块
         add(ModBlocks.SUN_BLOCK.get(), "太阳石");
+        //物品描述
+        add("item.demonworlds.demon_fruit_sun.desc", "\u00A76来自远古恶魔的诅咒-太阳之恶魔");
+        add("item.demonworlds.demon_fruit_moon.desc", "\u00A76来自远古恶魔的诅咒-月亮之恶魔");
     }
 }

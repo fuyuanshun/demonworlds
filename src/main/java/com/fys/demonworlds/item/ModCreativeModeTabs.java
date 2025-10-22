@@ -26,6 +26,7 @@ public class ModCreativeModeTabs {
                     .icon(()->ModItems.DEMON_FRUIT_SUN.get().getDefaultInstance())
                     .displayItems((parameters,output)->{
                         output.accept(ModItems.DEMON_FRUIT_SUN);
+                        output.accept(ModItems.DEMON_FRUIT_MOON);
                     })
                     .build());
 

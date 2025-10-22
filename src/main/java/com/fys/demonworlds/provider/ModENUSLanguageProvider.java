@@ -2,10 +2,8 @@ package com.fys.demonworlds.provider;
 
 import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.constants.ModConstants;
-import com.fys.demonworlds.item.ModCreativeModeTabs;
 import com.fys.demonworlds.item.ModItems;
 import net.minecraft.data.PackOutput;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
 /**
@@ -24,8 +22,13 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         //物品栏
         add("itemGroup.demon_fruit_tab", "demon fruit");
         add("itemGroup.demon_worlds_tab", "demon worlds");
-
-        add(ModItems.DEMON_FRUIT_SUN.get(), "\u00A76demon fruit sun");
+        //恶魔果实
+        add(ModItems.DEMON_FRUIT_SUN.get(), "demon fruit sun");
+        add(ModItems.DEMON_FRUIT_MOON.get(), "demon fruit moon");
+        //方块
         add(ModBlocks.SUN_BLOCK.get(), "sun block");
+        //物品描述
+        add("item.demonworlds.demon_fruit_sun.desc", "\u00A76Curse from the Ancient Demon - Sun Demon");
+        add("item.demonworlds.demon_fruit_moon.desc", "\u00A76Curse from the Ancient Demon - Moon Demon");
     }
 }

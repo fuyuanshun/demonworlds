@@ -45,5 +45,7 @@ public class ModDataGenerators {
         //标签数据生成
         generator.addProvider(event.includeServer(), new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper));
 //        generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider, ));
+        //配方数据生成
+        generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
     }
 }
