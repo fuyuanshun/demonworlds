@@ -22,5 +22,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.DEMON_FRUIT_SUN.get());
         basicItem(ModItems.DEMON_FRUIT_MOON.get());
+        basicItem(ModItems.DEMON_FRUIT_LIGHTNING.get());
     }
 }
