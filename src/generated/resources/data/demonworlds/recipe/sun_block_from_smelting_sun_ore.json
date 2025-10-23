@@ -1,14 +1,14 @@
 {
-  "type": "minecraft:blasting",
+  "type": "minecraft:smelting",
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.8,
-  "group": "end_block",
+  "group": "sun_block",
   "ingredient": {
-    "item": "demonworlds:end_block"
+    "item": "demonworlds:sun_ore"
   },
   "result": {
     "count": 1,
-    "id": "demonworlds:end_block"
+    "id": "demonworlds:sun_block"
   }
 }

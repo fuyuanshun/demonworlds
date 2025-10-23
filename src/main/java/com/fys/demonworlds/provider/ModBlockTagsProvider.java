@@ -25,9 +25,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.SUN_BLOCK.get());
+                .add(ModBlocks.SUN_BLOCK.get())
+                .add(ModBlocks.SUN_ORE.get())
+                .add(ModBlocks.END_BLOCK.get())
+                .add(ModBlocks.END_ORE.get())
+        ;
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.SUN_BLOCK.get());
+                .add(ModBlocks.SUN_BLOCK.get())
+                .add(ModBlocks.SUN_ORE.get())
+                .add(ModBlocks.END_BLOCK.get())
+                .add(ModBlocks.END_ORE.get())
+        ;
     }
 }

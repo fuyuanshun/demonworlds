@@ -19,6 +19,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         simpleBlockWithItem(ModBlocks.SUN_BLOCK.get(), cubeAll(ModBlocks.SUN_BLOCK.get()));
+        simpleBlockWithItem(ModBlocks.SUN_ORE.get(), cubeAll(ModBlocks.SUN_ORE.get()));
+        simpleBlockWithItem(ModBlocks.END_BLOCK.get(), cubeAll(ModBlocks.END_BLOCK.get()));
+        simpleBlockWithItem(ModBlocks.END_ORE.get(), cubeAll(ModBlocks.END_ORE.get()));
+        simpleBlockWithItem(ModBlocks.SIMPLE_BLOCK.get(), cubeAll(ModBlocks.SIMPLE_BLOCK.get()));
     }
 
 

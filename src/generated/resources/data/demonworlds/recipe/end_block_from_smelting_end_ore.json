@@ -3,12 +3,12 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.8,
-  "group": "sun_block",
+  "group": "end_block",
   "ingredient": {
-    "item": "demonworlds:sun_block"
+    "item": "demonworlds:end_ore"
   },
   "result": {
     "count": 1,
-    "id": "demonworlds:sun_block"
+    "id": "demonworlds:end_block"
   }
 }

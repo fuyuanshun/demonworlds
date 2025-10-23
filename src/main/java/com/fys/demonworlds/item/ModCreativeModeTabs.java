@@ -41,6 +41,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SUN_ORE);
                         output.accept(ModBlocks.END_BLOCK);
                         output.accept(ModBlocks.END_ORE);
+                        output.accept(ModBlocks.SIMPLE_BLOCK);
                     })
                     .build());
 

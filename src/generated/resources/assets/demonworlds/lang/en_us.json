@@ -1,9 +1,11 @@
 {
   "block.demonworlds.end_block": "end block",
   "block.demonworlds.end_ore": "end ore",
+  "block.demonworlds.simple_block": "simple block",
   "block.demonworlds.sun_block": "sun block",
   "block.demonworlds.sun_ore": "sun ore",
   "effect.demonworlds.lightning_effect": "lightning",
+  "item.demonworlds.demon_fruit_lightning": "demon fruit lighting",
   "item.demonworlds.demon_fruit_lightning.desc": "§6Curse from the Ancient Demon - Lightning Demon",
   "item.demonworlds.demon_fruit_moon": "demon fruit moon",
   "item.demonworlds.demon_fruit_moon.desc": "§6Curse from the Ancient Demon - Moon Demon",

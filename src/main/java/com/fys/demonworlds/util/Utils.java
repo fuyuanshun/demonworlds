@@ -2,6 +2,8 @@ package com.fys.demonworlds.util;
 
 import com.fys.demonworlds.constants.ModConstants;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EntityType;
@@ -18,10 +20,15 @@ import net.minecraft.world.phys.Vec3;
  */
 public class Utils {
 
-    public static void addHealth(Player player, double amount) {
+    public static void addHealth(Player player, double amount, String id) {
         // 获取玩家的最大生命值属性实例
         Level level = player.level();
-
+        CompoundTag tag = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        CompoundTag demonFruit = tag.getCompound(ModConstants.NBT_DEMON_FRUIT);
+        boolean eat = demonFruit.getBoolean(id);
+        if(eat){
+            return;
+        }
         if(level.isClientSide){
             return;
         }
@@ -30,8 +37,11 @@ public class Utils {
             return;
         }
         double currentHealth = maxHealth.getBaseValue();
-        double health = Math.min(currentHealth - amount, 1);
+        double health = Math.max(currentHealth + amount, 2);
         maxHealth.setBaseValue(health);
+        demonFruit.putBoolean(id, true);
+        tag.put(ModConstants.NBT_DEMON_FRUIT, demonFruit);
+        player.getPersistentData().put(Player.PERSISTED_NBT_TAG, tag);
     }
 
     /**

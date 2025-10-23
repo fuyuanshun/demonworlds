@@ -20,5 +20,10 @@ public class ModConstants {
     public static final List<Holder<MobEffect>> UN_CLEAR_EFFECT_LIST = List.of(
             ModMobEffects.LIGHTNING_EFFECT
     );
+    //存储吃过的恶魔果实列表
+    public static final String NBT_DEMON_FRUIT = "DEMON_FRUIT";
+
+    //存储死亡之前吃过的恶魔果实效果，重生后恢复
+    public static final String NBT_SAVED_EFFECT_LIST = "SAVED_EFFECT_LIST";
 
 }

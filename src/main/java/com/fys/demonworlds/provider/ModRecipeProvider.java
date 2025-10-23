@@ -20,8 +20,8 @@ import java.util.concurrent.CompletableFuture;
  */
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
-    public static final List<ItemLike> SUN_BLOCK_ORE = List.of(ModBlocks.SUN_BLOCK);
-    public static final List<ItemLike> END_BLOCK_ORE = List.of(ModBlocks.END_BLOCK);
+    public static final List<ItemLike> SUN_BLOCK_ORE = List.of(ModBlocks.SUN_ORE);
+    public static final List<ItemLike> END_BLOCK_ORE = List.of(ModBlocks.END_ORE);
 
     public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
