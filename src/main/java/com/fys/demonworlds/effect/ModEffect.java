@@ -7,9 +7,9 @@ import net.minecraft.world.effect.MobEffectCategory;
  * @author fys
  * @since 2025-10-23
  */
-public class LightningEffect extends MobEffect {
+public class ModEffect extends MobEffect {
 
-    protected LightningEffect() {
+    protected ModEffect() {
         super(MobEffectCategory.BENEFICIAL, 0xFFFF00);
     }
 
