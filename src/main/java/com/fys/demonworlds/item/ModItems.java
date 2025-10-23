@@ -1,6 +1,7 @@
 package com.fys.demonworlds.item;
 
 import com.fys.demonworlds.constants.ModConstants;
+import com.fys.demonworlds.item.customer.DemonFruitLightning;
 import com.fys.demonworlds.item.customer.DemonFruitMoon;
 import com.fys.demonworlds.item.customer.DemonFruitSun;
 import net.minecraft.world.food.FoodProperties;
@@ -23,6 +24,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> DEMON_FRUIT_MOON = ITEMS.register("demon_fruit_moon",
             () -> new DemonFruitMoon(new Item.Properties()));
+
+    public static final DeferredItem<Item> DEMON_FRUIT_LIGHTNING = ITEMS.register("demon_fruit_lightning",
+            () -> new DemonFruitLightning(new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

@@ -2,6 +2,7 @@ package com.fys.demonworlds.provider;
 
 import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.constants.ModConstants;
+import com.fys.demonworlds.effect.ModEffects;
 import com.fys.demonworlds.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
@@ -33,5 +34,8 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         //物品描述
         add("item.demonworlds.demon_fruit_sun.desc", "\u00A76Curse from the Ancient Demon - Sun Demon");
         add("item.demonworlds.demon_fruit_moon.desc", "\u00A76Curse from the Ancient Demon - Moon Demon");
+        add("item.demonworlds.demon_fruit_lightning.desc", "\u00A76Curse from the Ancient Demon - Lightning Demon");
+        //自定义效果
+        add(ModEffects.LIGHTNING_EFFECT.value(), "lightning");
     }
 }

@@ -1,4 +1,4 @@
-package com.fys.demonworlds.effect;
+package com.fys.demonworlds.evnet;
 
 import com.fys.demonworlds.constants.ModConstants;
 import net.minecraft.world.effect.MobEffects;

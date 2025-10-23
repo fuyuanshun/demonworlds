@@ -2,6 +2,7 @@ package com.fys.demonworlds;
 
 import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.constants.ModConstants;
+import com.fys.demonworlds.effect.ModEffects;
 import com.fys.demonworlds.item.ModCreativeModeTabs;
 import com.fys.demonworlds.item.ModItems;
 import net.neoforged.bus.api.IEventBus;
@@ -26,7 +27,8 @@ public class DemonWorlds {
         ModBlocks.register(modEventBus);
         //注册物品栏
         ModCreativeModeTabs.register(modEventBus);
-
+        //注册自定义效果
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

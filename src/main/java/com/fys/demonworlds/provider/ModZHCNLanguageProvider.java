@@ -2,6 +2,7 @@ package com.fys.demonworlds.provider;
 
 import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.constants.ModConstants;
+import com.fys.demonworlds.effect.ModEffects;
 import com.fys.demonworlds.item.ModCreativeModeTabs;
 import com.fys.demonworlds.item.ModItems;
 import net.minecraft.data.PackOutput;
@@ -34,5 +35,8 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         //物品描述
         add("item.demonworlds.demon_fruit_sun.desc", "\u00A76来自远古恶魔的诅咒-太阳之恶魔");
         add("item.demonworlds.demon_fruit_moon.desc", "\u00A76来自远古恶魔的诅咒-月亮之恶魔");
+        add("item.demonworlds.demon_fruit_lightning.desc", "\u00A76来自远古恶魔的诅咒-闪电之恶魔");
+        //自定义效果
+        add(ModEffects.LIGHTNING_EFFECT.value(), "您已拥有闪电之力");
     }
 }

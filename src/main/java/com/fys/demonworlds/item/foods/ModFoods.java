@@ -1,5 +1,7 @@
 package com.fys.demonworlds.item.foods;
 
+import com.fys.demonworlds.effect.ModEffects;
+import com.fys.demonworlds.evnet.ModMobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -23,5 +25,12 @@ public class ModFoods {
             .nutrition(4)
             .saturationModifier(1.2F)
             .effect(()->new MobEffectInstance(MobEffects.NIGHT_VISION, Integer.MAX_VALUE, 5, true, false, false), 1.0F)
+            .build();
+
+    public static final FoodProperties DEMON_FRUIT_LIGHTNING = new FoodProperties.Builder()
+            .alwaysEdible()
+            .nutrition(4)
+            .saturationModifier(1.2F)
+            .effect(()->new MobEffectInstance(ModEffects.LIGHTNING_EFFECT, Integer.MAX_VALUE, 5, true, false, false), 1.0F)
             .build();
 }

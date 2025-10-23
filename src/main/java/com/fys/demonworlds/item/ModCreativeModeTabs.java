@@ -27,6 +27,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters,output)->{
                         output.accept(ModItems.DEMON_FRUIT_SUN);
                         output.accept(ModItems.DEMON_FRUIT_MOON);
+                        output.accept(ModItems.DEMON_FRUIT_LIGHTNING);
                     })
                     .build());
 

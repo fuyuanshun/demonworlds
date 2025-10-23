@@ -3,6 +3,8 @@
   "block.demonworlds.end_ore": "末影原矿",
   "block.demonworlds.sun_block": "太阳石",
   "block.demonworlds.sun_ore": "太阳原矿",
+  "effect.demonworlds.lightning_effect": "您已拥有闪电之力",
+  "item.demonworlds.demon_fruit_lightning.desc": "§6来自远古恶魔的诅咒-闪电之恶魔",
   "item.demonworlds.demon_fruit_moon": "月亮之恶魔果实",
   "item.demonworlds.demon_fruit_moon.desc": "§6来自远古恶魔的诅咒-月亮之恶魔",
   "item.demonworlds.demon_fruit_sun": "太阳之恶魔果实",
