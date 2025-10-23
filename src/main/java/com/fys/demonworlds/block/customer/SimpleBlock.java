@@ -18,9 +18,9 @@ import java.util.stream.Stream;
 public class SimpleBlock extends Block {
 
     private static final VoxelShape SHAPE_BY_AGE = Stream.of(
-            Shapes.box(2, 2, 3, 9, 8, 9),
-            Shapes.box(2, 1, 2, 9, 2, 9),
-            Shapes.box(2, 8, 2, 9, 9, 9)
+            Shapes.box(0, 2, 0, 16, 14, 16),
+            Shapes.box(0, 1, -1, 16, 2, 16),
+            Shapes.box(0, 14, -1, 16, 15, 16)
     ).reduce(Shapes::or).get();
 
     public SimpleBlock(Properties properties) {
