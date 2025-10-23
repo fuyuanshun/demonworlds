@@ -1,6 +1,6 @@
 package com.fys.demonworlds.item.customer;
 
-import com.fys.demonworlds.util.HealthUtil;
+import com.fys.demonworlds.util.Utils;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -22,7 +22,7 @@ public class DemonFruit extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
         //减一滴血
-        HealthUtil.addHealth(player, -2);
+        Utils.addHealth(player, -2);
         return super.use(level, player, usedHand);
     }
 }

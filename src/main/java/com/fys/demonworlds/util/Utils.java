@@ -6,7 +6,10 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
+import net.minecraft.world.entity.ai.attributes.AttributeInstance;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
 /**
@@ -14,6 +17,22 @@ import net.minecraft.world.phys.Vec3;
  * @since 2025-10-23
  */
 public class Utils {
+
+    public static void addHealth(Player player, double amount) {
+        // 获取玩家的最大生命值属性实例
+        Level level = player.level();
+
+        if(level.isClientSide){
+            return;
+        }
+        AttributeInstance maxHealth = player.getAttribute(Attributes.MAX_HEALTH);
+        if(maxHealth == null){
+            return;
+        }
+        double currentHealth = maxHealth.getBaseValue();
+        double health = Math.min(currentHealth - amount, 1);
+        maxHealth.setBaseValue(health);
+    }
 
     /**
      *

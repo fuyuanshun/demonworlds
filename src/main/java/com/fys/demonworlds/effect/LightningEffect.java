@@ -13,5 +13,4 @@ public class LightningEffect extends MobEffect {
         super(MobEffectCategory.BENEFICIAL, 0xFFFF00);
     }
 
-
 }
