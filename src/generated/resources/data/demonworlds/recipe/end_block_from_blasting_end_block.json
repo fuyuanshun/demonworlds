@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.8,
+  "group": "end_block",
+  "ingredient": {
+    "item": "demonworlds:end_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "demonworlds:end_block"
+  }
+}

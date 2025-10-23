@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_end_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "demonworlds:end_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "demonworlds:end_block_from_blasting_end_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_end_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "demonworlds:end_block_from_blasting_end_block"
+    ]
+  }
+}

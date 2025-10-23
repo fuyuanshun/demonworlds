@@ -21,6 +21,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
     public static final List<ItemLike> SUN_BLOCK_ORE = List.of(ModBlocks.SUN_BLOCK);
+    public static final List<ItemLike> END_BLOCK_ORE = List.of(ModBlocks.END_BLOCK);
 
     public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
@@ -30,6 +31,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput recipeOutput) {
         //熔炉配方
         oreSmelting(recipeOutput, SUN_BLOCK_ORE, RecipeCategory.MISC, ModBlocks.SUN_BLOCK, 0.8F, 200, "sun_block");
+        oreBlasting(recipeOutput, SUN_BLOCK_ORE, RecipeCategory.MISC, ModBlocks.SUN_BLOCK, 0.8F, 200, "sun_block");
+        //
+        oreSmelting(recipeOutput, END_BLOCK_ORE, RecipeCategory.MISC, ModBlocks.END_BLOCK, 0.8F, 200, "end_block");
+        oreBlasting(recipeOutput, END_BLOCK_ORE, RecipeCategory.MISC, ModBlocks.END_BLOCK, 0.8F, 200, "end_block");
 
         //工作台配方
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.DEMON_FRUIT_SUN)
@@ -39,6 +44,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', ModBlocks.SUN_BLOCK)
                 .unlockedBy(getHasName(ModBlocks.SUN_BLOCK), has(ModBlocks.SUN_BLOCK))
                 .save(recipeOutput);
+
     }
 
     protected static void oreSmelting(
