@@ -21,6 +21,9 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ModConstants.MOD_ID);
 
     public static final DeferredBlock<Block> SUN_BLOCK = register("sun_block", BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.5F, 5.0F));
+    public static final DeferredBlock<Block> SUN_ORE = register("sun_ore", BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.5F, 5.0F));
+    public static final DeferredBlock<Block> END_BLOCK = register("end_block", BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.5F, 5.0F));
+    public static final DeferredBlock<Block> END_ORE = register("end_ore", BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.5F, 5.0F));
 
     public static DeferredBlock<Block> register(String name, BlockBehaviour.Properties block){
         DeferredBlock<Block> sunBlock = BLOCKS.registerSimpleBlock(name, block);

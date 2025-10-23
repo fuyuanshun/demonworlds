@@ -37,6 +37,9 @@ public class ModCreativeModeTabs {
 //                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "demon_fruit_tab"))
                     .displayItems((parameters,output)->{
                         output.accept(ModBlocks.SUN_BLOCK);
+                        output.accept(ModBlocks.SUN_ORE);
+                        output.accept(ModBlocks.END_BLOCK);
+                        output.accept(ModBlocks.END_ORE);
                     })
                     .build());
 

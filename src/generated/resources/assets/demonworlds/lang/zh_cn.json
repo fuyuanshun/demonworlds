@@ -1,5 +1,8 @@
 {
+  "block.demonworlds.end_block": "末影石",
+  "block.demonworlds.end_ore": "末影原矿",
   "block.demonworlds.sun_block": "太阳石",
+  "block.demonworlds.sun_ore": "太阳原矿",
   "item.demonworlds.demon_fruit_moon": "月亮之恶魔果实",
   "item.demonworlds.demon_fruit_moon.desc": "§6来自远古恶魔的诅咒-月亮之恶魔",
   "item.demonworlds.demon_fruit_sun": "太阳之恶魔果实",

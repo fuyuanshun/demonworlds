@@ -27,6 +27,9 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add(ModItems.DEMON_FRUIT_MOON.get(), "demon fruit moon");
         //方块
         add(ModBlocks.SUN_BLOCK.get(), "sun block");
+        add(ModBlocks.SUN_ORE.get(), "sun ore");
+        add(ModBlocks.END_BLOCK.get(), "end block");
+        add(ModBlocks.END_ORE.get(), "end ore");
         //物品描述
         add("item.demonworlds.demon_fruit_sun.desc", "\u00A76Curse from the Ancient Demon - Sun Demon");
         add("item.demonworlds.demon_fruit_moon.desc", "\u00A76Curse from the Ancient Demon - Moon Demon");
