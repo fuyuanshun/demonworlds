@@ -24,9 +24,9 @@ public class ModEffect extends MobEffect {
         super(MobEffectCategory.BENEFICIAL, 0xFFFF00);
 
 //        this.addAttributeModifier(Attributes.ATTACK_SPEED,
-//                ResourceLocation.fromNamespaceAndPath("",""),
+//                ResourceLocation.withDefaultNamespace("effect.haste"),
 //                0.2,
-//                AttributeModifier.Operation.ADD_MULTIPLIED_BASE
+//                AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
 //                );
     }
 
