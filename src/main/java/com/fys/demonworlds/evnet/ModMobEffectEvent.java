@@ -32,7 +32,7 @@ public class ModMobEffectEvent {
      * @param event
      */
     @SubscribeEvent
-    public static void onPlayerDeath(MobEffectEvent.Expired event){
+    public static void onEffectExpired(MobEffectEvent.Expired event){
         if(event.getEffectInstance() == null){
             return;
         }
@@ -47,7 +47,7 @@ public class ModMobEffectEvent {
      * @param event
      */
     @SubscribeEvent
-    public static void onLeftClick(PlayerInteractEvent.LeftClickEmpty event){
+    public static void onLeftClickEmpty(PlayerInteractEvent.LeftClickEmpty event){
         Player player = event.getEntity();
         //空手时触发
         if(!player.getMainHandItem().isEmpty()){
