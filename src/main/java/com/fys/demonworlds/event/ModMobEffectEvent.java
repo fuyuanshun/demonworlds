@@ -19,12 +19,18 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 /**
+ * 事件监听类
+ *
  * @author fys
  * @since 2025-10-23
  */
 @EventBusSubscriber(modid = ModConstants.MOD_ID)
 public class ModMobEffectEvent {
 
+    /**
+     * 监听效果移除，例如牛奶
+     * @param event
+     */
     @SubscribeEvent
     public static void onEffectRemoved(MobEffectEvent.Remove event){
         if(event.getEffectInstance() == null){
@@ -37,7 +43,7 @@ public class ModMobEffectEvent {
     }
 
     /**
-     *
+     * 监听生物死亡事件
      * @param event
      */
     @SubscribeEvent
@@ -71,6 +77,10 @@ public class ModMobEffectEvent {
         }
     }
 
+    /**
+     * 监听玩家复活事件
+     * @param event
+     */
     @SubscribeEvent
     public static void onPlayerRespawn(PlayerEvent.PlayerRespawnEvent event){
         Player player = event.getEntity();
@@ -88,11 +98,13 @@ public class ModMobEffectEvent {
             }
             // 4. 清除已恢复的 NBT 数据（避免重复恢复）
             persistentData.remove("SavedEffects");
+            player.getPersistentData().put(Player.PERSISTED_NBT_TAG, persistentData);
         }
     }
 
     /**
-     * 左手攻击时，如果有闪电果实效果，则触发闪电
+     * 监听玩家左手攻击空挥事件
+     * 如果有闪电果实效果，则触发闪电
      * @param event
      */
     @SubscribeEvent

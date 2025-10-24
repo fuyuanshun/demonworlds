@@ -20,6 +20,14 @@ public class DemonFruit extends Item {
         super(properties);
     }
 
+    /**
+     * 所有恶魔果实通用效果
+     * 吃掉后获得诅咒效果，生命值-2（最小值不会小于2）。不同恶魔果实只会减少一次生命上限
+     * @param stack
+     * @param level
+     * @param livingEntity
+     * @return
+     */
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity livingEntity) {
         if(livingEntity instanceof Player player) {

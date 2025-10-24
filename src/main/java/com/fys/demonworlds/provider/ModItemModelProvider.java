@@ -12,7 +12,6 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
  */
 public class ModItemModelProvider extends ItemModelProvider {
 
-
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, ModConstants.MOD_ID, existingFileHelper);
     }
@@ -23,6 +22,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.DEMON_FRUIT_SUN.get());
         basicItem(ModItems.DEMON_FRUIT_MOON.get());
         basicItem(ModItems.DEMON_FRUIT_LIGHTNING.get());
-        basicItem(ModItems.MF.get());
+        //自定义3D物品，不写数据生成
+//        basicItem(ModItems.MF.get());
     }
 }
