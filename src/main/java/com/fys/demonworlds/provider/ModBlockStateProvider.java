@@ -22,7 +22,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.SUN_ORE.get(), cubeAll(ModBlocks.SUN_ORE.get()));
         simpleBlockWithItem(ModBlocks.END_BLOCK.get(), cubeAll(ModBlocks.END_BLOCK.get()));
         simpleBlockWithItem(ModBlocks.END_ORE.get(), cubeAll(ModBlocks.END_ORE.get()));
-        simpleBlockWithItem(ModBlocks.SIMPLE_BLOCK.get(), cubeAll(ModBlocks.SIMPLE_BLOCK.get()));
+        //自定义3D模型方块，不写数据生成
+//        simpleBlockWithItem(ModBlocks.SIMPLE_BLOCK.get(), cubeAll(ModBlocks.SIMPLE_BLOCK.get()));
     }
 
 

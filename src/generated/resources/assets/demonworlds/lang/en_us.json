@@ -11,7 +11,8 @@
   "item.demonworlds.demon_fruit_moon.desc": "§6Curse from the Ancient Demon - Moon Demon",
   "item.demonworlds.demon_fruit_sun": "demon fruit sun",
   "item.demonworlds.demon_fruit_sun.desc": "§6Curse from the Ancient Demon - Sun Demon",
-  "item.demonworlds.mf": "mf",
+  "item.demonworlds.mf": "Rubik's Cube",
+  "item.demonworlds.mf.desc": "§4A magical Rubik's Cube, I wonder what its function is",
   "itemGroup.demon_fruit_tab": "demon fruit",
   "itemGroup.demon_worlds_tab": "demon worlds"
 }

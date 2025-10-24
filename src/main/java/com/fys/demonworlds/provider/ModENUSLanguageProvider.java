@@ -28,7 +28,7 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add(ModItems.DEMON_FRUIT_MOON.get(), "demon fruit moon");
         add(ModItems.DEMON_FRUIT_LIGHTNING.get(), "demon fruit lighting");
         //普通物品
-        add(ModItems.MF.get(), "mf");
+        add(ModItems.MF.get(), "Rubik's Cube");
         //方块
         add(ModBlocks.SUN_BLOCK.get(), "sun block");
         add(ModBlocks.SUN_ORE.get(), "sun ore");
@@ -39,6 +39,7 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add("item.demonworlds.demon_fruit_sun.desc", "\u00A76Curse from the Ancient Demon - Sun Demon");
         add("item.demonworlds.demon_fruit_moon.desc", "\u00A76Curse from the Ancient Demon - Moon Demon");
         add("item.demonworlds.demon_fruit_lightning.desc", "\u00A76Curse from the Ancient Demon - Lightning Demon");
+        add("item.demonworlds.mf.desc", "\u00A74A magical Rubik's Cube, I wonder what its function is");
         //自定义效果
         add(ModMobEffects.LIGHTNING_EFFECT.value(), "lightning");
     }

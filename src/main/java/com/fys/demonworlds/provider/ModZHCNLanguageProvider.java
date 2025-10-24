@@ -39,6 +39,7 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         add("item.demonworlds.demon_fruit_sun.desc", "\u00A76来自远古恶魔的诅咒-太阳之恶魔");
         add("item.demonworlds.demon_fruit_moon.desc", "\u00A76来自远古恶魔的诅咒-月亮之恶魔");
         add("item.demonworlds.demon_fruit_lightning.desc", "\u00A76来自远古恶魔的诅咒-闪电之恶魔");
+        add("item.demonworlds.mf.desc", "\u00A74一个神奇的魔方，不知道有什么作用");
         //自定义效果
         add(ModMobEffects.LIGHTNING_EFFECT.value(), "您已拥有闪电之力");
     }
