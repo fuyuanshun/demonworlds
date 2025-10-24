@@ -27,6 +27,8 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add(ModItems.DEMON_FRUIT_SUN.get(), "demon fruit sun");
         add(ModItems.DEMON_FRUIT_MOON.get(), "demon fruit moon");
         add(ModItems.DEMON_FRUIT_LIGHTNING.get(), "demon fruit lighting");
+        //普通物品
+        add(ModItems.MF.get(), "mf");
         //方块
         add(ModBlocks.SUN_BLOCK.get(), "sun block");
         add(ModBlocks.SUN_ORE.get(), "sun ore");

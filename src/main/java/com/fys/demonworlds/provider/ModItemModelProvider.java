@@ -23,5 +23,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.DEMON_FRUIT_SUN.get());
         basicItem(ModItems.DEMON_FRUIT_MOON.get());
         basicItem(ModItems.DEMON_FRUIT_LIGHTNING.get());
+        basicItem(ModItems.MF.get());
     }
 }

@@ -28,6 +28,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.DEMON_FRUIT_SUN);
                         output.accept(ModItems.DEMON_FRUIT_MOON);
                         output.accept(ModItems.DEMON_FRUIT_LIGHTNING);
+                        output.accept(ModItems.MF);
                     })
                     .build());
 

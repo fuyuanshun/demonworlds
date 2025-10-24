@@ -28,6 +28,9 @@ public class ModItems {
     public static final DeferredItem<Item> DEMON_FRUIT_LIGHTNING = ITEMS.register("demon_fruit_lightning",
             () -> new DemonFruitLightning(new Item.Properties()));
 
+    public static final DeferredItem<Item> MF = ITEMS.register("mf",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

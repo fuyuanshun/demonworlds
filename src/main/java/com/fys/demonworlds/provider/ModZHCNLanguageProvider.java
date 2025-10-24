@@ -27,6 +27,8 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         add(ModItems.DEMON_FRUIT_SUN.get(), "太阳之恶魔果实");
         add(ModItems.DEMON_FRUIT_MOON.get(), "月亮之恶魔果实");
         add(ModItems.DEMON_FRUIT_LIGHTNING.get(), "闪电之恶魔果实");
+        //普通物品
+        add(ModItems.MF.get(), "魔方");
         //方块
         add(ModBlocks.SUN_BLOCK.get(), "太阳石");
         add(ModBlocks.SUN_ORE.get(), "太阳原矿");
