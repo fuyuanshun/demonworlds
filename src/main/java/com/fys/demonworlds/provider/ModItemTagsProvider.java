@@ -1,6 +1,7 @@
 package com.fys.demonworlds.provider;
 
 import com.fys.demonworlds.constants.ModConstants;
+import com.fys.demonworlds.tags.ModItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -24,5 +25,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        tag(ModItemTags.CLEAR_CURSE_MATERIAL)
+//                .add(ModI)
+        ;
     }
 }

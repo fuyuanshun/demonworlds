@@ -28,7 +28,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.DEMON_FRUIT_SUN);
                         output.accept(ModItems.DEMON_FRUIT_MOON);
                         output.accept(ModItems.DEMON_FRUIT_LIGHTNING);
-                        output.accept(ModItems.MF);
                     })
                     .build());
 
@@ -43,6 +42,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.END_BLOCK);
                         output.accept(ModBlocks.END_ORE);
                         output.accept(ModBlocks.SIMPLE_BLOCK);
+                        output.accept(ModItems.MF);
+                        //武器
+                        output.accept(ModItems.BAT);
+                        output.accept(ModItems.END_SWORD);
+                        //工具
+                        output.accept(ModItems.END_AXE);
+                        output.accept(ModItems.END_PICKAXE);
+                        output.accept(ModItems.END_HOE);
+                        output.accept(ModItems.END_SHOVEL);
+
                     })
                     .build());
 

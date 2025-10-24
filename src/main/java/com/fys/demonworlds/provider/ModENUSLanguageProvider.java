@@ -29,6 +29,14 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add(ModItems.DEMON_FRUIT_LIGHTNING.get(), "demon fruit lighting");
         //普通物品
         add(ModItems.MF.get(), "Rubik's Cube");
+        //自定义武器
+        add(ModItems.BAT.get(), "bat");
+        add(ModItems.END_SWORD.get(), "end sword");
+        //自定义工具
+        add(ModItems.END_AXE.get(), "end axe");
+        add(ModItems.END_PICKAXE.get(), "end pickaxe");
+        add(ModItems.END_HOE.get(), "end hoe");
+        add(ModItems.END_SHOVEL.get(), "end shovel");
         //方块
         add(ModBlocks.SUN_BLOCK.get(), "sun block");
         add(ModBlocks.SUN_ORE.get(), "sun ore");

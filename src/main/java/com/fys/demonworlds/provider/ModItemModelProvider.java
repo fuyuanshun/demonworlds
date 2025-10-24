@@ -24,5 +24,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.DEMON_FRUIT_LIGHTNING.get());
         //自定义3D物品，不写数据生成
 //        basicItem(ModItems.MF.get());
+        //自定义武器
+        basicItem(ModItems.END_SWORD.get());
+
+        //自定义工具
+        basicItem(ModItems.END_AXE.get());
+        basicItem(ModItems.END_PICKAXE.get());
+        basicItem(ModItems.END_HOE.get());
+        basicItem(ModItems.END_SHOVEL.get());
+
     }
 }

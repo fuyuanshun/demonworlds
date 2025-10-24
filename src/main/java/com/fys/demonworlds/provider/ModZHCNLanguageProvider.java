@@ -29,6 +29,14 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         add(ModItems.DEMON_FRUIT_LIGHTNING.get(), "闪电之恶魔果实");
         //普通物品
         add(ModItems.MF.get(), "魔方");
+        //自定义武器
+        add(ModItems.BAT.get(), "球棒");
+        add(ModItems.END_SWORD.get(), "末地之剑");
+        //自定义工具
+        add(ModItems.END_AXE.get(), "末地之斧");
+        add(ModItems.END_PICKAXE.get(), "末地之稿");
+        add(ModItems.END_HOE.get(), "末地之锄");
+        add(ModItems.END_SHOVEL.get(), "末地之铲");
         //方块
         add(ModBlocks.SUN_BLOCK.get(), "太阳石");
         add(ModBlocks.SUN_ORE.get(), "太阳原矿");

@@ -6,10 +6,7 @@ import com.fys.demonworlds.item.customer.DemonFruitMoon;
 import com.fys.demonworlds.item.customer.DemonFruitSun;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -22,8 +19,10 @@ import java.util.List;
  */
 public class ModItems {
 
+    //延迟注册器
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ModConstants.MOD_ID);
 
+    //恶魔果实
     public static final DeferredItem<Item> DEMON_FRUIT_SUN = ITEMS.register("demon_fruit_sun",
             () -> new DemonFruitSun(new Item.Properties()));
 
@@ -33,6 +32,19 @@ public class ModItems {
     public static final DeferredItem<Item> DEMON_FRUIT_LIGHTNING = ITEMS.register("demon_fruit_lightning",
             () -> new DemonFruitLightning(new Item.Properties()));
 
+    //自定义工具
+    public static final DeferredItem<Item> END_AXE = ITEMS.register("end_axe", () -> new AxeItem(ModTiers.END, new Item.Properties().attributes(AxeItem.createAttributes(ModTiers.END, 8, -2.5F))));
+    public static final DeferredItem<Item> END_PICKAXE = ITEMS.register("end_pickaxe", () -> new PickaxeItem(ModTiers.END, new Item.Properties().attributes(PickaxeItem.createAttributes(ModTiers.END, 1.1F, -2.5F))));
+    public static final DeferredItem<Item> END_HOE = ITEMS.register("end_hoe", () -> new HoeItem(ModTiers.END, new Item.Properties().attributes(HoeItem.createAttributes(ModTiers.END, -3F, -2.5F))));
+    public static final DeferredItem<Item> END_SHOVEL = ITEMS.register("end_shovel", () -> new ShovelItem(ModTiers.END, new Item.Properties().attributes(ShovelItem.createAttributes(ModTiers.END, 1.8F, -2.8F))));
+
+
+    //自定义武器
+    public static final DeferredItem<Item> END_SWORD = ITEMS.register("end_sword", () -> new SwordItem(ModTiers.END, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.END, 5, 1.0F))));
+    public static final DeferredItem<Item> BAT = ITEMS.register("bat", () -> new SwordItem(ModTiers.END, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.END, 3, -1.0F))));
+
+
+    //物品
     public static final DeferredItem<Item> MF = ITEMS.register("mf",
             () -> new Item(new Item.Properties()){
                 @Override

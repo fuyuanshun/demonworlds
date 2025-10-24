@@ -43,8 +43,11 @@ public class ModDataGenerators {
         generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(ModLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
         //标签数据生成
-        generator.addProvider(event.includeServer(), new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper));
-//        generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider, ));
+        //方块标签
+        ModBlockTagsProvider modBlockTagsProvider = new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper);
+        generator.addProvider(event.includeServer(), modBlockTagsProvider);
+        //物品标签
+        generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider, modBlockTagsProvider.contentsGetter(), existingFileHelper));
         //配方数据生成
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
     }
