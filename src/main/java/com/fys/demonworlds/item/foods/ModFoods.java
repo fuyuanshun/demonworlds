@@ -16,20 +16,23 @@ public class ModFoods {
             .alwaysEdible()
                 .nutrition(4)
                 .saturationModifier(1.2F)
-                .effect(()->new MobEffectInstance(MobEffects.MOVEMENT_SPEED, Integer.MAX_VALUE, 5, true, false, false), 1.0F)
+                .effect(()->new MobEffectInstance(MobEffects.MOVEMENT_SPEED, -1, 5, true, false, false), 1.0F)
+                .effect(()->new MobEffectInstance(ModMobEffects.CURSE, -1, 0, true, false, false), 1.0F)
             .build();
 
     public static final FoodProperties DEMON_FRUIT_SUN = new FoodProperties.Builder()
             .alwaysEdible()
             .nutrition(4)
             .saturationModifier(1.2F)
-            .effect(()->new MobEffectInstance(MobEffects.NIGHT_VISION, Integer.MAX_VALUE, 5, true, false, false), 1.0F)
+            .effect(()->new MobEffectInstance(MobEffects.NIGHT_VISION, -1, 5, true, false, false), 1.0F)
+            .effect(()->new MobEffectInstance(ModMobEffects.CURSE, -1, 0, true, false, false), 1.0F)
             .build();
 
     public static final FoodProperties DEMON_FRUIT_LIGHTNING = new FoodProperties.Builder()
             .alwaysEdible()
             .nutrition(4)
             .saturationModifier(1.2F)
-            .effect(()->new MobEffectInstance(ModMobEffects.LIGHTNING_EFFECT, Integer.MAX_VALUE, 5, true, false, false), 1.0F)
+            .effect(()->new MobEffectInstance(ModMobEffects.LIGHTNING_EFFECT, -1, 0, true, false, false), 1.0F)
+            .effect(()->new MobEffectInstance(ModMobEffects.CURSE, -1, 0, true, false, false), 1.0F)
             .build();
 }

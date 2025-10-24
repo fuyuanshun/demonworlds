@@ -42,5 +42,6 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add("item.demonworlds.mf.desc", "\u00A74A small Rubik's Cube, I wonder what its function is");
         //自定义效果
         add(ModMobEffects.LIGHTNING_EFFECT.value(), "lightning");
+        add(ModMobEffects.CURSE.value(), "Demon's Curse");
     }
 }

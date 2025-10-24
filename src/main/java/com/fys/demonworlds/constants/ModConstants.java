@@ -18,7 +18,8 @@ public class ModConstants {
     public static final Integer LIGHTNING_FRUIT_DISTANCE = 10;
 
     public static final List<Holder<MobEffect>> UN_CLEAR_EFFECT_LIST = List.of(
-            ModMobEffects.LIGHTNING_EFFECT
+            ModMobEffects.LIGHTNING_EFFECT,
+            ModMobEffects.CURSE
     );
     //存储吃过的恶魔果实列表
     public static final String NBT_DEMON_FRUIT = "DEMON_FRUIT";

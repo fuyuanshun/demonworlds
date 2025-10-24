@@ -14,10 +14,7 @@ import java.util.UUID;
  */
 public class ModEffect extends MobEffect {
 
-    // 用于属性修改的唯一标识符（避免与其他效果冲突）
-    private static final UUID MOVEMENT_SPEED_BOOST_UUID = UUID.fromString("8a5f8432-5e4d-4f3a-9b8c-7d6e5c4b3a2f");
-
-    protected ModEffect() {
+    public ModEffect() {
         super(MobEffectCategory.BENEFICIAL, 0xFFFF00);
 
 //        this.addAttributeModifier(Attributes.ATTACK_SPEED,
@@ -27,9 +24,15 @@ public class ModEffect extends MobEffect {
 //                );
     }
 
+    public ModEffect(MobEffectCategory category, int color) {
+        super(category, color);
+    }
+
     @Override
     public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
         return super.applyEffectTick(livingEntity, amplifier);
     }
+
+
 
 }

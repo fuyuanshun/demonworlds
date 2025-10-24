@@ -4,6 +4,7 @@
   "block.demonworlds.simple_block": "自定义方块",
   "block.demonworlds.sun_block": "太阳石",
   "block.demonworlds.sun_ore": "太阳原矿",
+  "effect.demonworlds.curse": "恶魔的诅咒",
   "effect.demonworlds.lightning_effect": "您已拥有闪电之力",
   "item.demonworlds.demon_fruit_lightning": "闪电之恶魔果实",
   "item.demonworlds.demon_fruit_lightning.desc": "§6来自远古恶魔的诅咒-闪电之恶魔",
@@ -12,7 +13,7 @@
   "item.demonworlds.demon_fruit_sun": "太阳之恶魔果实",
   "item.demonworlds.demon_fruit_sun.desc": "§6来自远古恶魔的诅咒-太阳之恶魔",
   "item.demonworlds.mf": "魔方",
-  "item.demonworlds.mf.desc": "§4一个神奇的魔方，不知道有什么作用",
+  "item.demonworlds.mf.desc": "§4一个小小的魔方，不知道有什么作用",
   "itemGroup.demon_fruit_tab": "恶魔果实",
   "itemGroup.demon_worlds_tab": "恶魔方块"
 }

@@ -42,5 +42,6 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         add("item.demonworlds.mf.desc", "\u00A74一个小小的魔方，不知道有什么作用");
         //自定义效果
         add(ModMobEffects.LIGHTNING_EFFECT.value(), "您已拥有闪电之力");
+        add(ModMobEffects.CURSE.value(), "恶魔的诅咒");
     }
 }
