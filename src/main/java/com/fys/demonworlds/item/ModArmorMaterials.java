@@ -32,7 +32,18 @@ public class ModArmorMaterials {
         p_323385_.put(ArmorItem.Type.BODY, 12);
     }), 17, SoundEvents.ARMOR_EQUIP_WOLF, 4.0F, 0.13F, () -> Ingredient.of(ModBlocks.END_BLOCK));
 
-    private static Holder<ArmorMaterial> register(
+    /**
+     * 注册
+     * @param name
+     * @param defense
+     * @param enchantmentValue
+     * @param equipSound
+     * @param toughness
+     * @param knockbackResistance
+     * @param repairIngridient
+     * @return
+     */
+    public static Holder<ArmorMaterial> register(
             String name,
             EnumMap<ArmorItem.Type, Integer> defense,
             int enchantmentValue,

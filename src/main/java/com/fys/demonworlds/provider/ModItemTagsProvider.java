@@ -1,10 +1,12 @@
 package com.fys.demonworlds.provider;
 
 import com.fys.demonworlds.constants.ModConstants;
+import com.fys.demonworlds.item.ModItems;
 import com.fys.demonworlds.tags.ModItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -28,5 +30,12 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ModItemTags.CLEAR_CURSE_MATERIAL)
 //                .add(ModI)
         ;
+
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.END_HELMET.get())
+                .add(ModItems.END_CHESTPLATE.get())
+                .add(ModItems.END_LEGGINS.get())
+                .add(ModItems.END_BOOTS.get())
+                ;
     }
 }

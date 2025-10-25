@@ -78,6 +78,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.END_ORE);
                         output.accept(ModBlocks.SIMPLE_BLOCK);
                         output.accept(ModItems.MF);
+                        output.accept(ModItems.DARK_DUST);
                     })
                     .build());
 

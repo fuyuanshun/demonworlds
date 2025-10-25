@@ -3,6 +3,7 @@ package com.fys.demonworlds.constants;
 import com.fys.demonworlds.effect.ModMobEffects;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 
 import java.util.List;
 
@@ -19,7 +20,8 @@ public class ModConstants {
 
     public static final List<Holder<MobEffect>> UN_CLEAR_EFFECT_LIST = List.of(
             ModMobEffects.LIGHTNING_EFFECT,
-            ModMobEffects.CURSE
+            ModMobEffects.CURSE,
+            MobEffects.NIGHT_VISION
     );
     //存储吃过的恶魔果实列表
     public static final String NBT_DEMON_FRUIT = "DEMON_FRUIT";
