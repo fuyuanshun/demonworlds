@@ -1,5 +1,6 @@
 package com.fys.demonworlds.item;
 
+import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.tags.ModBlockTags;
 import com.google.common.base.Suppliers;
 import net.minecraft.tags.BlockTags;
@@ -17,7 +18,8 @@ import java.util.function.Supplier;
  */
 public enum ModTiers implements Tier {
 
-    END(ModBlockTags.INCORRECT_FOR_END_TOOL, 59, 2.0F, 0.0F, 15, () -> Ingredient.of(ItemTags.PLANKS));
+    //Ingredient.of表示修复材料 支持标签、物品、方块等
+    END(ModBlockTags.INCORRECT_FOR_END_TOOL, 2088, 12.0F, 4.0F, 20, () -> Ingredient.of(ModBlocks.END_BLOCK));
 
     private final TagKey<Block> incorrectBlocksForDrops;
     private final int uses;

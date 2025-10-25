@@ -20,9 +20,10 @@ public class ModCreativeModeTabs {
 
     public static final DeferredRegister<CreativeModeTab> MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ModConstants.MOD_ID);
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DEMON_FRUIT_TAB = MODE_TAB.register("demon_fruit_tab",
+    //恶魔果实
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DEMON_WORLDS_FRUIT_TAB = MODE_TAB.register("demon_worlds_fruit",
             ()-> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.demon_fruit_tab"))
+                    .title(Component.translatable("itemGroup.demon_worlds_fruit"))
                     .icon(()->ModItems.DEMON_FRUIT_SUN.get().getDefaultInstance())
                     .displayItems((parameters,output)->{
                         output.accept(ModItems.DEMON_FRUIT_SUN);
@@ -31,18 +32,12 @@ public class ModCreativeModeTabs {
                     })
                     .build());
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DEMON_WORLDS_TAB = MODE_TAB.register("demon_worlds_tab",
+    //工具、装备
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DEMON_WORLDS_EQUIPMENT_TAB = MODE_TAB.register("demon_worlds_equipment",
             ()-> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.demon_worlds_tab"))
-                    .icon(()->new ItemStack(ModBlocks.SUN_BLOCK))
-//                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "demon_fruit_tab"))
+                    .title(Component.translatable("itemGroup.demon_worlds_equipment"))
+                    .icon(()->ModItems.END_PICKAXE.get().getDefaultInstance())
                     .displayItems((parameters,output)->{
-                        output.accept(ModBlocks.SUN_BLOCK);
-                        output.accept(ModBlocks.SUN_ORE);
-                        output.accept(ModBlocks.END_BLOCK);
-                        output.accept(ModBlocks.END_ORE);
-                        output.accept(ModBlocks.SIMPLE_BLOCK);
-                        output.accept(ModItems.MF);
                         //武器
                         output.accept(ModItems.BAT);
                         output.accept(ModItems.END_SWORD);
@@ -51,6 +46,23 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.END_PICKAXE);
                         output.accept(ModItems.END_HOE);
                         output.accept(ModItems.END_SHOVEL);
+                    })
+                    .build());
+
+    //杂项
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DEMON_WORLDS_MISC_TAB = MODE_TAB.register("demon_worlds_misc",
+            ()-> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.demon_worlds_misc"))
+                    .icon(()->new ItemStack(ModItems.MF.get()))
+//                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "demon_fruit_tab"))
+                    .displayItems((parameters,output)->{
+                        output.accept(ModBlocks.SUN_BLOCK);
+                        output.accept(ModBlocks.SUN_ORE);
+                        output.accept(ModBlocks.END_BLOCK);
+                        output.accept(ModBlocks.END_ORE);
+                        output.accept(ModBlocks.SIMPLE_BLOCK);
+                        output.accept(ModItems.MF);
+
 
                     })
                     .build());

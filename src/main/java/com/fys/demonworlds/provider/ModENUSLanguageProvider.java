@@ -21,8 +21,9 @@ public class ModENUSLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         //物品栏
-        add("itemGroup.demon_fruit_tab", "demon fruit");
-        add("itemGroup.demon_worlds_tab", "demon worlds");
+        add("itemGroup.demon_worlds_fruit", "demon worlds：fruit");
+        add("itemGroup.demon_worlds_misc", "demon worlds：misc");
+        add("itemGroup.demon_worlds_equipment", "demon worlds: equipment");
         //恶魔果实
         add(ModItems.DEMON_FRUIT_SUN.get(), "demon fruit sun");
         add(ModItems.DEMON_FRUIT_MOON.get(), "demon fruit moon");
@@ -42,7 +43,7 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add(ModBlocks.SUN_ORE.get(), "sun ore");
         add(ModBlocks.END_BLOCK.get(), "end block");
         add(ModBlocks.END_ORE.get(), "end ore");
-        add(ModBlocks.SIMPLE_BLOCK.get(), "simple block");
+        add(ModBlocks.SIMPLE_BLOCK.get(), "Magic blocks");
         //物品描述
         add("item.demonworlds.demon_fruit_sun.desc", "\u00A76Curse from the Ancient Demon - Sun Demon");
         add("item.demonworlds.demon_fruit_moon.desc", "\u00A76Curse from the Ancient Demon - Moon Demon");

@@ -35,6 +35,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.END_ORE.get())
         ;
 
+        tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .add(ModBlocks.SUN_BLOCK.get())
+                .add(ModBlocks.SUN_ORE.get())
+        ;
+
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.END_BLOCK.get())
                 .add(ModBlocks.END_ORE.get())
@@ -51,12 +56,13 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         ;
 
         tag(ModBlockTags.INCORRECT_FOR_END_TOOL)
-                .addTag(ModBlockTags.NEEDS_SUN_TOOL)
+//                .addTag(ModBlockTags.NEEDS_SUN_TOOL)
 //                .add(ModBlocks.SUN_BLOCK.get())
 //                .add(ModBlocks.SUN_ORE.get())
         ;
 
         tag(ModBlockTags.INCORRECT_FOR_SUN_TOOL)
+//                .addTag(BlockTags.NEEDS_DIAMOND_TOOL)
         ;
     }
 }

@@ -24,11 +24,11 @@ public class ModBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ModConstants.MOD_ID);
 
-    public static final DeferredBlock<Block> SUN_BLOCK = register("sun_block", Block::new, BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.5F, 5.0F));
-    public static final DeferredBlock<Block> SUN_ORE = register("sun_ore", Block::new, BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.5F, 5.0F));
-    public static final DeferredBlock<Block> END_BLOCK = register("end_block", Block::new, BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.5F, 5.0F));
-    public static final DeferredBlock<Block> END_ORE = register("end_ore", Block::new, BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.5F, 5.0F));
-    public static final DeferredBlock<Block> SIMPLE_BLOCK = register("simple_block", SimpleBlock::new, BlockBehaviour.Properties.of().strength(3.5F, 5.0F).noLootTable());
+    public static final DeferredBlock<Block> SUN_BLOCK = register("sun_block", Block::new, BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.5F, 5.0F));
+    public static final DeferredBlock<Block> SUN_ORE = register("sun_ore", Block::new, BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.5F, 5.0F));
+    public static final DeferredBlock<Block> END_BLOCK = register("end_block", Block::new, BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.5F, 5.0F));
+    public static final DeferredBlock<Block> END_ORE = register("end_ore", Block::new, BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(5.5F, 5.0F));
+    public static final DeferredBlock<Block> SIMPLE_BLOCK = register("simple_block", SimpleBlock::new, BlockBehaviour.Properties.of().strength(1.5F, 5.0F));
 
     public static DeferredBlock<Block> register(String name, Function<BlockBehaviour.Properties, ? extends Block> func, BlockBehaviour.Properties block){
         DeferredBlock<Block> sunBlock = BLOCKS.registerBlock(name, func, block);

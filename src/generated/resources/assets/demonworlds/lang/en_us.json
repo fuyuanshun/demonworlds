@@ -1,7 +1,7 @@
 {
   "block.demonworlds.end_block": "end block",
   "block.demonworlds.end_ore": "end ore",
-  "block.demonworlds.simple_block": "simple block",
+  "block.demonworlds.simple_block": "Magic blocks",
   "block.demonworlds.sun_block": "sun block",
   "block.demonworlds.sun_ore": "sun ore",
   "effect.demonworlds.curse": "Demon's Curse",
@@ -20,6 +20,7 @@
   "item.demonworlds.end_sword": "end sword",
   "item.demonworlds.mf": "Rubik's Cube",
   "item.demonworlds.mf.desc": "§4A small Rubik's Cube, I wonder what its function is",
-  "itemGroup.demon_fruit_tab": "demon fruit",
-  "itemGroup.demon_worlds_tab": "demon worlds"
+  "itemGroup.demon_worlds_equipment": "demon worlds: equipment",
+  "itemGroup.demon_worlds_fruit": "demon worlds：fruit",
+  "itemGroup.demon_worlds_misc": "demon worlds：misc"
 }

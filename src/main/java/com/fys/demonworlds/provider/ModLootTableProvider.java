@@ -36,6 +36,7 @@ public class ModLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SUN_ORE.get());
         dropSelf(ModBlocks.END_BLOCK.get());
         dropSelf(ModBlocks.END_ORE.get());
+        dropSelf(ModBlocks.SIMPLE_BLOCK.get());
 
     }
 

@@ -16,7 +16,7 @@ public class ModFoods {
             .alwaysEdible()
                 .nutrition(4)
                 .saturationModifier(1.2F)
-                .effect(()->new MobEffectInstance(MobEffects.MOVEMENT_SPEED, -1, 5, true, false, false), 1.0F)
+                .effect(()->new MobEffectInstance(MobEffects.MOVEMENT_SPEED, -1, 1, true, false, false), 1.0F)
                 .effect(()->new MobEffectInstance(ModMobEffects.CURSE, -1, 0, true, false, false), 1.0F)
             .build();
 
@@ -24,7 +24,8 @@ public class ModFoods {
             .alwaysEdible()
             .nutrition(4)
             .saturationModifier(1.2F)
-            .effect(()->new MobEffectInstance(MobEffects.NIGHT_VISION, -1, 5, true, false, false), 1.0F)
+            .effect(()->new MobEffectInstance(MobEffects.NIGHT_VISION, -1, 0, true, false, false), 1.0F)
+            .effect(()->new MobEffectInstance(MobEffects.FIRE_RESISTANCE, -1, 0, true, false, false), 1.0F)
             .effect(()->new MobEffectInstance(ModMobEffects.CURSE, -1, 0, true, false, false), 1.0F)
             .build();
 
