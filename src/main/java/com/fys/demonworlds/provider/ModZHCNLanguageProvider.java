@@ -23,7 +23,8 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         //物品栏
         add("itemGroup.demon_worlds_fruit", "恶魔世界：果实");
         add("itemGroup.demon_worlds_misc", "恶魔世界：杂项");
-        add("itemGroup.demon_worlds_equipment", "恶魔世界: 工具和装备");
+        add("itemGroup.demon_worlds_tool", "恶魔世界: 工具");
+        add("itemGroup.demon_worlds_equipment", "恶魔世界: 装备");
         //恶魔果实
         add(ModItems.DEMON_FRUIT_SUN.get(), "太阳之恶魔果实");
         add(ModItems.DEMON_FRUIT_MOON.get(), "月亮之恶魔果实");
@@ -38,6 +39,11 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         add(ModItems.END_PICKAXE.get(), "末地之稿");
         add(ModItems.END_HOE.get(), "末地之锄");
         add(ModItems.END_SHOVEL.get(), "末地之铲");
+        //自定义盔甲
+        add(ModItems.END_HELMET.get(), "末地头盔");
+        add(ModItems.END_CHESTPLATE.get(), "末地胸甲");
+        add(ModItems.END_LEGGINS.get(), "末地护腿");
+        add(ModItems.END_BOOTS.get(), "末地靴");
         //方块
         add(ModBlocks.SUN_BLOCK.get(), "太阳石");
         add(ModBlocks.SUN_ORE.get(), "太阳原矿");

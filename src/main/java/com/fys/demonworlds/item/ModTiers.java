@@ -19,7 +19,7 @@ import java.util.function.Supplier;
 public enum ModTiers implements Tier {
 
     //Ingredient.of表示修复材料 支持标签、物品、方块等
-    END(ModBlockTags.INCORRECT_FOR_END_TOOL, 2088, 12.0F, 4.0F, 20, () -> Ingredient.of(ModBlocks.END_BLOCK));
+    END(ModBlockTags.INCORRECT_FOR_END_TOOL, 2088, 9.5F, 4.0F, 18, () -> Ingredient.of(ModBlocks.END_BLOCK));
 
     private final TagKey<Block> incorrectBlocksForDrops;
     private final int uses;

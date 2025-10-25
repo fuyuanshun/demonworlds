@@ -40,9 +40,14 @@ public class ModItems {
 
 
     //自定义武器
-    public static final DeferredItem<Item> END_SWORD = ITEMS.register("end_sword", () -> new SwordItem(ModTiers.END, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.END, 5, 1.0F))));
-    public static final DeferredItem<Item> BAT = ITEMS.register("bat", () -> new SwordItem(ModTiers.END, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.END, 3, -1.0F))));
+    public static final DeferredItem<Item> END_SWORD = ITEMS.register("end_sword", () -> new SwordItem(ModTiers.END, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.END, 5, -1.0F))));
+    public static final DeferredItem<Item> BAT = ITEMS.register("bat", () -> new AxeItem(ModTiers.END, new Item.Properties().attributes(AxeItem.createAttributes(ModTiers.END, 3, -1.0F))));
 
+    //自定义盔甲
+    public static final DeferredItem<Item> END_HELMET = ITEMS.register("end_helmet", () -> new ArmorItem(ModArmorMaterials.END, ArmorItem.Type.HELMET, new Item.Properties().fireResistant().durability(ArmorItem.Type.HELMET.getDurability(40))));
+    public static final DeferredItem<Item> END_CHESTPLATE = ITEMS.register("end_chestplate", () -> new ArmorItem(ModArmorMaterials.END, ArmorItem.Type.CHESTPLATE, new Item.Properties().fireResistant().durability(ArmorItem.Type.CHESTPLATE.getDurability(40))));
+    public static final DeferredItem<Item> END_LEGGINS = ITEMS.register("end_leggings", () -> new ArmorItem(ModArmorMaterials.END, ArmorItem.Type.LEGGINGS, new Item.Properties().fireResistant().durability(ArmorItem.Type.LEGGINGS.getDurability(40))));
+    public static final DeferredItem<Item> END_BOOTS = ITEMS.register("end_boots", () -> new ArmorItem(ModArmorMaterials.END, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(40))));
 
     //物品
     public static final DeferredItem<Item> MF = ITEMS.register("mf",

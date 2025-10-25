@@ -14,7 +14,11 @@
   "item.demonworlds.demon_fruit_sun": "demon fruit sun",
   "item.demonworlds.demon_fruit_sun.desc": "§6Curse from the Ancient Demon - Sun Demon",
   "item.demonworlds.end_axe": "end axe",
+  "item.demonworlds.end_boots": "end boots",
+  "item.demonworlds.end_chestplate": "end chestplate",
+  "item.demonworlds.end_helmet": "end helmet",
   "item.demonworlds.end_hoe": "end hoe",
+  "item.demonworlds.end_leggings": "end leggings",
   "item.demonworlds.end_pickaxe": "end pickaxe",
   "item.demonworlds.end_shovel": "end shovel",
   "item.demonworlds.end_sword": "end sword",
@@ -22,5 +26,6 @@
   "item.demonworlds.mf.desc": "§4A small Rubik's Cube, I wonder what its function is",
   "itemGroup.demon_worlds_equipment": "demon worlds: equipment",
   "itemGroup.demon_worlds_fruit": "demon worlds：fruit",
-  "itemGroup.demon_worlds_misc": "demon worlds：misc"
+  "itemGroup.demon_worlds_misc": "demon worlds：misc",
+  "itemGroup.demon_worlds_tool": "demon worlds: tool"
 }

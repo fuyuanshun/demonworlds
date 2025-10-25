@@ -23,6 +23,7 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         //物品栏
         add("itemGroup.demon_worlds_fruit", "demon worlds：fruit");
         add("itemGroup.demon_worlds_misc", "demon worlds：misc");
+        add("itemGroup.demon_worlds_tool", "demon worlds: tool");
         add("itemGroup.demon_worlds_equipment", "demon worlds: equipment");
         //恶魔果实
         add(ModItems.DEMON_FRUIT_SUN.get(), "demon fruit sun");
@@ -38,6 +39,12 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add(ModItems.END_PICKAXE.get(), "end pickaxe");
         add(ModItems.END_HOE.get(), "end hoe");
         add(ModItems.END_SHOVEL.get(), "end shovel");
+        //自定义盔甲
+        add(ModItems.END_HELMET.get(), "end helmet");
+        add(ModItems.END_CHESTPLATE.get(), "end chestplate");
+        add(ModItems.END_LEGGINS.get(), "end leggings");
+        add(ModItems.END_BOOTS.get(), "end boots");
+
         //方块
         add(ModBlocks.SUN_BLOCK.get(), "sun block");
         add(ModBlocks.SUN_ORE.get(), "sun ore");

@@ -25,13 +25,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         //自定义3D物品，不写数据生成
 //        basicItem(ModItems.MF.get());
         //自定义武器
-        basicItem(ModItems.END_SWORD.get());
+        handheldItem(ModItems.END_SWORD.get());
 
         //自定义工具
-        basicItem(ModItems.END_AXE.get());
-        basicItem(ModItems.END_PICKAXE.get());
-        basicItem(ModItems.END_HOE.get());
-        basicItem(ModItems.END_SHOVEL.get());
-
+        handheldItem(ModItems.END_AXE.get());
+        handheldItem(ModItems.END_PICKAXE.get());
+        handheldItem(ModItems.END_HOE.get());
+        handheldItem(ModItems.END_SHOVEL.get());
+        //自定义盔甲
+        basicItem(ModItems.END_HELMET.get());
+        basicItem(ModItems.END_CHESTPLATE.get());
+        basicItem(ModItems.END_LEGGINS.get());
+        basicItem(ModItems.END_BOOTS.get());
     }
 }

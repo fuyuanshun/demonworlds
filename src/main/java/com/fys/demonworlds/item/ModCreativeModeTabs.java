@@ -25,6 +25,8 @@ public class ModCreativeModeTabs {
             ()-> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.demon_worlds_fruit"))
                     .icon(()->ModItems.DEMON_FRUIT_SUN.get().getDefaultInstance())
+                    //默认是按照首字母从小到大排序，使用该方法可以将该物品栏排在指定物品栏之前
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "demon_worlds_equipment"))
                     .displayItems((parameters,output)->{
                         output.accept(ModItems.DEMON_FRUIT_SUN);
                         output.accept(ModItems.DEMON_FRUIT_MOON);
@@ -32,15 +34,13 @@ public class ModCreativeModeTabs {
                     })
                     .build());
 
-    //工具、装备
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DEMON_WORLDS_EQUIPMENT_TAB = MODE_TAB.register("demon_worlds_equipment",
+    //工具
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DEMON_WORLDS_TOOL_TAB = MODE_TAB.register("demon_worlds_tool",
             ()-> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.demon_worlds_equipment"))
-                    .icon(()->ModItems.END_PICKAXE.get().getDefaultInstance())
+                    .title(Component.translatable("itemGroup.demon_worlds_tool"))
+                    .icon(() -> ModItems.END_PICKAXE.get().getDefaultInstance())
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "demon_worlds_misc"))
                     .displayItems((parameters,output)->{
-                        //武器
-                        output.accept(ModItems.BAT);
-                        output.accept(ModItems.END_SWORD);
                         //工具
                         output.accept(ModItems.END_AXE);
                         output.accept(ModItems.END_PICKAXE);
@@ -49,12 +49,28 @@ public class ModCreativeModeTabs {
                     })
                     .build());
 
+    //装备
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DEMON_WORLDS_EQUIPMENT_TAB = MODE_TAB.register("demon_worlds_equipment",
+            ()-> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.demon_worlds_equipment"))
+                    .icon(() -> ModItems.END_SWORD.get().getDefaultInstance())
+                    .displayItems((parameters,output)->{
+                        //武器
+                        output.accept(ModItems.BAT);
+                        output.accept(ModItems.END_SWORD);
+                        //盔甲
+                        output.accept(ModItems.END_HELMET);
+                        output.accept(ModItems.END_CHESTPLATE);
+                        output.accept(ModItems.END_LEGGINS);
+                        output.accept(ModItems.END_BOOTS);
+                    })
+                    .build());
+
     //杂项
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DEMON_WORLDS_MISC_TAB = MODE_TAB.register("demon_worlds_misc",
             ()-> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.demon_worlds_misc"))
-                    .icon(()->new ItemStack(ModItems.MF.get()))
-//                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "demon_fruit_tab"))
+                    .icon(() -> ModItems.MF.get().getDefaultInstance())
                     .displayItems((parameters,output)->{
                         output.accept(ModBlocks.SUN_BLOCK);
                         output.accept(ModBlocks.SUN_ORE);
@@ -62,8 +78,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.END_ORE);
                         output.accept(ModBlocks.SIMPLE_BLOCK);
                         output.accept(ModItems.MF);
-
-
                     })
                     .build());
 
