@@ -6,6 +6,7 @@ import net.minecraft.world.item.crafting.RecipeType;
 import org.jetbrains.annotations.Nullable;
 
 /**
+ * 可燃物 使用getBurnTime设置燃烧时间即可
  * @author fys
  * @date 2025/10/25
  * @description

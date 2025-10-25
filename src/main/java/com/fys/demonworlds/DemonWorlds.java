@@ -1,6 +1,7 @@
 package com.fys.demonworlds;
 
 import com.fys.demonworlds.block.ModBlocks;
+import com.fys.demonworlds.block.component.ModDataComponents;
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.effect.ModMobEffects;
 import com.fys.demonworlds.item.ModCreativeModeTabs;
@@ -29,6 +30,8 @@ public class DemonWorlds {
         ModCreativeModeTabs.register(modEventBus);
         //注册自定义效果
         ModMobEffects.register(modEventBus);
+        //自定义数据组件
+        ModDataComponents.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

@@ -13,6 +13,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 /**
+ *
  * @author fys
  * @since 2025-10-22
  */

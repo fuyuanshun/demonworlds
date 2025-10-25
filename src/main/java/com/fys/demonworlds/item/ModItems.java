@@ -1,9 +1,11 @@
 package com.fys.demonworlds.item;
 
+import com.fys.demonworlds.block.component.ModDataComponents;
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.item.customer.DemonFruitLightning;
 import com.fys.demonworlds.item.customer.DemonFruitMoon;
 import com.fys.demonworlds.item.customer.DemonFruitSun;
+import com.fys.demonworlds.item.customer.ModItemMF;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -51,7 +53,7 @@ public class ModItems {
 
     //物品
     public static final DeferredItem<Item> MF = ITEMS.register("mf",
-            () -> new Item(new Item.Properties()){
+            () -> new ModItemMF(new Item.Properties()){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);

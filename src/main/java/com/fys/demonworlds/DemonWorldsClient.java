@@ -1,6 +1,7 @@
 package com.fys.demonworlds;
 
 import com.fys.demonworlds.constants.ModConstants;
+import com.fys.demonworlds.item.ModItemProperties;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -19,6 +20,6 @@ public class DemonWorldsClient {
 
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
-
+        ModItemProperties.addProperties();
     }
 }
