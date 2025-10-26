@@ -35,4 +35,6 @@ public class ModEffect extends MobEffect {
 
 
 
+
+
 }

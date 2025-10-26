@@ -23,8 +23,7 @@ public class ModArmorItem extends ArmorItem {
 
     private Map<Holder<ArmorMaterial>, List<MobEffectInstance>> EFFECT_MAP = new HashMap<>(){{
         put(ModArmorMaterials.END, List.of(
-                new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300, 1, true, false, true),
-                new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300, 1, true, false, true)
+                new MobEffectInstance(MobEffects.GLOWING, 300, 1, true, false, true)
         ));
         }
     };

@@ -56,7 +56,8 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         //物品描述
         add("item.demonworlds.demon_fruit_sun.desc", "\u00A76Curse from the Ancient Demon - Sun Demon");
         add("item.demonworlds.demon_fruit_moon.desc", "\u00A76Curse from the Ancient Demon - Moon Demon");
-        add("item.demonworlds.demon_fruit_lightning.desc", "\u00A76Curse from the Ancient Demon - Lightning Demon");
+        add("item.demonworlds.demon_fruit_lightning.desc", "SHIFT DOWN FOR DESC");
+        add("item.demonworlds.demon_fruit_lightning.shiftdown", "\u00A76Curse from the Ancient Demon - Lightning Demon");
         add("item.demonworlds.mf.desc", "\u00A74A small Rubik's Cube, I wonder what its function is");
         //自定义效果
         add(ModMobEffects.LIGHTNING_EFFECT.value(), "lightning");

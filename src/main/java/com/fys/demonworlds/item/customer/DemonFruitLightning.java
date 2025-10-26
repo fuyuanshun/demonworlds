@@ -1,6 +1,7 @@
 package com.fys.demonworlds.item.customer;
 
 import com.fys.demonworlds.item.foods.ModFoods;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
@@ -21,6 +22,10 @@ public class DemonFruitLightning extends DemonFruit {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
-        tooltipComponents.add(Component.translatable("item.demonworlds.demon_fruit_lightning.desc"));
+        if(Screen.hasShiftDown()) {
+            tooltipComponents.add(Component.translatable("item.demonworlds.demon_fruit_lightning.shiftdown"));
+        } else {
+            tooltipComponents.add(Component.translatable("item.demonworlds.demon_fruit_lightning.desc"));
+        }
     }
 }

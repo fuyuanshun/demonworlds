@@ -2,20 +2,32 @@ package com.fys.demonworlds.event;
 
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.effect.ModMobEffects;
+import com.fys.demonworlds.item.ModItems;
 import com.fys.demonworlds.util.Utils;
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
 import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
+
+import java.util.*;
 
 /**
  * 事件监听类
@@ -26,6 +38,23 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 @EventBusSubscriber(modid = ModConstants.MOD_ID)
 public class ModMobEffectEventListener {
 
+    //用于存储玩家最后一个使用的物品，用来判断是否可以清楚特殊buff
+    private static final Map<UUID, ItemStack> LAST_USE_ITEM_MAP = new HashMap<>();
+
+    @SubscribeEvent
+    public static void onUseItem(LivingEntityUseItemEvent.Finish event) {
+        LivingEntity entity = event.getEntity();
+        if(entity instanceof Player player && event.getItem().is(ModItems.DARK_DUST)) {
+            LAST_USE_ITEM_MAP.put(player.getUUID(), event.getItem());
+
+            if(player.level() instanceof ServerLevel serverLevel) {
+                serverLevel.getServer().execute(()->{
+                    LAST_USE_ITEM_MAP.remove(player.getUUID());
+                });
+            }
+        }
+    }
+
     /**
      * 监听效果移除，例如牛奶
      * @param event
@@ -35,8 +64,8 @@ public class ModMobEffectEventListener {
         if(event.getEffectInstance() == null){
             return;
         }
-
-        if(ModConstants.UN_CLEAR_EFFECT_LIST.contains(event.getEffectInstance().getEffect())){
+        //取消移除
+        if(ModConstants.UN_CLEAR_EFFECT_LIST.contains(event.getEffectInstance().getEffect()) && !LAST_USE_ITEM_MAP.containsKey(event.getEntity().getUUID())){
             event.setCanceled(true);
         }
     }

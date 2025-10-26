@@ -1,11 +1,7 @@
 package com.fys.demonworlds.item;
 
-import com.fys.demonworlds.block.component.ModDataComponents;
 import com.fys.demonworlds.constants.ModConstants;
-import com.fys.demonworlds.item.customer.DemonFruitLightning;
-import com.fys.demonworlds.item.customer.DemonFruitMoon;
-import com.fys.demonworlds.item.customer.DemonFruitSun;
-import com.fys.demonworlds.item.customer.ModItemMF;
+import com.fys.demonworlds.item.customer.*;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -62,8 +58,12 @@ public class ModItems {
                 }
             });
 
-    //燃料
-    public static final DeferredItem<Item> DARK_DUST = ITEMS.register("dark_dust", () -> new ModFuelItem(new Item.Properties(), 200));
+    //黑暗之尘
+    public static final DeferredItem<Item> DARK_DUST = ITEMS.register("dark_dust", () -> new DarkDustItem(new Item.Properties().food(
+            new FoodProperties.Builder()
+                    .alwaysEdible()
+                    .build()
+    ), 200));
 
 
     public static void register(IEventBus eventBus){

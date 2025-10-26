@@ -15,6 +15,8 @@ public class ModConstants {
 
     public static final String MOD_ID = "demonworlds";
 
+    public static final int DEMON_FRUIT_SUB_HEALTH = 2;
+
     //闪电果实攻击距离
     public static final Integer LIGHTNING_FRUIT_DISTANCE = 10;
 

@@ -22,7 +22,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
  */
 public class Utils {
 
-    public static void addHealth(Player player, double amount, String id) {
+    public static void subHealthByFruitCount(Player player, String id) {
         // 获取玩家的最大生命值属性实例
         Level level = player.level();
         CompoundTag tag = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
@@ -39,7 +39,9 @@ public class Utils {
             return;
         }
         double currentHealth = maxHealth.getBaseValue();
-        double health = Math.max(currentHealth + amount, 2);
+
+        int size = demonFruit.size();
+        double health = Math.max(currentHealth - ((size+1) * ModConstants.DEMON_FRUIT_SUB_HEALTH), 2);
         maxHealth.setBaseValue(health);
         demonFruit.putBoolean(id, true);
         tag.put(ModConstants.NBT_DEMON_FRUIT, demonFruit);
@@ -58,4 +60,14 @@ public class Utils {
         }
     }
 
+    /**
+     * 获取已经使用的恶魔果实数量
+     * @param player
+     * @return
+     */
+    public static int demonFruitCount(Player player) {
+        CompoundTag tag = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        CompoundTag demonFruit = tag.getCompound(ModConstants.NBT_DEMON_FRUIT);
+        return demonFruit.size();
+    }
 }
