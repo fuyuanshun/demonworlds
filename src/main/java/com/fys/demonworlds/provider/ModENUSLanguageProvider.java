@@ -62,5 +62,9 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         //自定义效果
         add(ModMobEffects.LIGHTNING_EFFECT.value(), "lightning");
         add(ModMobEffects.CURSE.value(), "Demon's Curse");
+        //药水
+        add("item.minecraft.potion.effect.slime_potion", "slime potion");
+        add("item.minecraft.splash_potion.effect.slime_potion", "splash slime potion");
+        add("item.minecraft.lingering_potion.effect.slime_potion", "lingering slime potion");
     }
 }

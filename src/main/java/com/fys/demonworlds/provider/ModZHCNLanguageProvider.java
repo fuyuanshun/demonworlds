@@ -61,5 +61,9 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         //自定义效果
         add(ModMobEffects.LIGHTNING_EFFECT.value(), "闪电之力");
         add(ModMobEffects.CURSE.value(), "恶魔的诅咒");
+        //药水
+        add("item.minecraft.potion.effect.slime_potion", "史莱姆药水");
+        add("item.minecraft.splash_potion.effect.slime_potion", "喷溅史莱姆药水");
+        add("item.minecraft.lingering_potion.effect.slime_potion", "滞留史莱姆药水");
     }
 }

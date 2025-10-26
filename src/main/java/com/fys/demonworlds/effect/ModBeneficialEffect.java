@@ -4,17 +4,15 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 
-import java.util.UUID;
-
 /**
  * 无实际效果，根据实际逻辑继承调整
  *
  * @author fys
  * @since 2025-10-23
  */
-public class ModEffect extends MobEffect {
+public class ModBeneficialEffect extends MobEffect {
 
-    public ModEffect() {
+    public ModBeneficialEffect() {
         super(MobEffectCategory.BENEFICIAL, 0xFFFF00);
 
 //        this.addAttributeModifier(Attributes.ATTACK_SPEED,
@@ -24,7 +22,7 @@ public class ModEffect extends MobEffect {
 //                );
     }
 
-    public ModEffect(MobEffectCategory category, int color) {
+    public ModBeneficialEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
 

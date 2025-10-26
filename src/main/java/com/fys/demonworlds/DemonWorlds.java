@@ -6,6 +6,7 @@ import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.effect.ModMobEffects;
 import com.fys.demonworlds.item.ModCreativeModeTabs;
 import com.fys.demonworlds.item.ModItems;
+import com.fys.demonworlds.potion.ModPotions;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -24,6 +25,8 @@ public class DemonWorlds {
 
         //注册物品
         ModItems.register(modEventBus);
+        //自定义药水
+        ModPotions.registerPotions(modEventBus);
         //注册方块
         ModBlocks.register(modEventBus);
         //注册物品栏

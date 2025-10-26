@@ -16,8 +16,8 @@ public class ModMobEffects {
 
     public static final DeferredRegister<MobEffect> EFFECTS = DeferredRegister.create(Registries.MOB_EFFECT, ModConstants.MOD_ID);
 
-    public static final Holder<MobEffect> LIGHTNING_EFFECT = EFFECTS.register("lightning_effect", ModEffect::new);
-    public static final Holder<MobEffect> CURSE = EFFECTS.register("curse", ()->new ModEffect(MobEffectCategory.HARMFUL, 0xFFF000));
+    public static final Holder<MobEffect> LIGHTNING_EFFECT = EFFECTS.register("lightning_effect", ModBeneficialEffect::new);
+    public static final Holder<MobEffect> CURSE = EFFECTS.register("curse", ()->new ModBeneficialEffect(MobEffectCategory.HARMFUL, 0xFFF000));
 
     public static void register(IEventBus eventBus){
         EFFECTS.register(eventBus);
