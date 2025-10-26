@@ -50,6 +50,8 @@ public class ModDataGenerators {
         generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider, modBlockTagsProvider.contentsGetter(), existingFileHelper));
         //配方数据生成
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
+        //附魔台列表数据生成
+        generator.addProvider(event.includeServer(), new ModEnchantmentTagsProvider(packOutput, lookupProvider, existingFileHelper));
         //
         generator.addProvider(event.includeServer(), new ModDatapackProvider(packOutput, lookupProvider));
     }
