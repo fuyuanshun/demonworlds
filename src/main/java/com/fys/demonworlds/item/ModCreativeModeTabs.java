@@ -64,6 +64,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.END_CHESTPLATE);
                         output.accept(ModItems.END_LEGGINS);
                         output.accept(ModItems.END_BOOTS);
+                        //弓
+                        output.accept(ModItems.DIAMOND_BOW);
                     })
                     .build());
 

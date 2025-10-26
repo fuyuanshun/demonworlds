@@ -24,7 +24,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
  * @since 2025-10-23
  */
 @EventBusSubscriber(modid = ModConstants.MOD_ID)
-public class ModMobEffectEvent {
+public class ModMobEffectEventListener {
 
     /**
      * 监听效果移除，例如牛奶

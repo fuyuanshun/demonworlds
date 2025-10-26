@@ -44,6 +44,7 @@ public class ModItems {
     //自定义武器
     public static final DeferredItem<SwordItem> END_SWORD = ITEMS.register("end_sword", () -> new SwordItem(ModTiers.END, new Item.Properties().attributes(SwordItem.createAttributes(ModTiers.END, 5, -1.0F))));
     public static final DeferredItem<AxeItem> BAT = ITEMS.register("bat", () -> new AxeItem(ModTiers.END, new Item.Properties().attributes(AxeItem.createAttributes(ModTiers.END, 3, -1.0F))));
+    public static final DeferredItem<BowItem> DIAMOND_BOW = ITEMS.register("diamond_bow", () -> new BowItem(new Item.Properties().durability(888)));
 
     //自定义盔甲
     public static final DeferredItem<ArmorItem> END_HELMET = ITEMS.register("end_helmet", () -> new ModArmorItem(ModArmorMaterials.END, ArmorItem.Type.HELMET, new Item.Properties().fireResistant().durability(ArmorItem.Type.HELMET.getDurability(40))));

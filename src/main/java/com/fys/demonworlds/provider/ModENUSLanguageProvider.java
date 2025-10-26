@@ -35,6 +35,7 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         //自定义武器
         add(ModItems.BAT.get(), "bat");
         add(ModItems.END_SWORD.get(), "end sword");
+        add(ModItems.DIAMOND_BOW.get(), "diamond bow");
         //自定义工具
         add(ModItems.END_AXE.get(), "end axe");
         add(ModItems.END_PICKAXE.get(), "end pickaxe");

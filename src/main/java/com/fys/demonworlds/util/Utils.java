@@ -1,6 +1,7 @@
 package com.fys.demonworlds.util;
 
 import com.fys.demonworlds.constants.ModConstants;
+import com.fys.demonworlds.packet.LightningAbilityPacket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
@@ -13,6 +14,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 /**
  * @author fys
@@ -49,21 +51,10 @@ public class Utils {
      * @param player
      */
     public static void drawLightning(Player player){
-        if(player.level() instanceof ServerLevel serverLevel){
-            Vec3 lookVec = player.getLookAngle();
-            Vec3 startPos = player.getEyePosition();
-            Vec3 endPos = startPos.add(lookVec.x * ModConstants.LIGHTNING_FRUIT_DISTANCE, lookVec.y * ModConstants.LIGHTNING_FRUIT_DISTANCE, lookVec.z * ModConstants.LIGHTNING_FRUIT_DISTANCE);
-            BlockPos lightningPos = new BlockPos((int)endPos.x, (int)endPos.y, (int)endPos.z);
-
-            LightningBolt lightningBolt = new LightningBolt(EntityType.LIGHTNING_BOLT, serverLevel);
-
-            lightningBolt.setPos(lightningPos.getX() + 0.5, lightningPos.getY(), lightningPos.getZ() + 0.5);
-            lightningBolt.setVisualOnly(false);
-
-            if(player instanceof ServerPlayer serverPlayer){
-                lightningBolt.setCause(serverPlayer);
-            }
-            serverLevel.addFreshEntity(lightningBolt);
+        //客户端发送数据包到服务器
+        //PlayerInteractEvent.LeftClickEmpty只在客户端触发，需要发送数据包到服务器端
+        if(player.level().isClientSide){
+            PacketDistributor.sendToServer(new LightningAbilityPacket());
         }
     }
 

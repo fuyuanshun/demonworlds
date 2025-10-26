@@ -35,6 +35,7 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         //自定义武器
         add(ModItems.BAT.get(), "球棒");
         add(ModItems.END_SWORD.get(), "末地之剑");
+        add(ModItems.DIAMOND_BOW.get(), "钻石弓");
         //自定义工具
         add(ModItems.END_AXE.get(), "末地之斧");
         add(ModItems.END_PICKAXE.get(), "末地之稿");
