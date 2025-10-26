@@ -50,5 +50,7 @@ public class ModDataGenerators {
         generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider, modBlockTagsProvider.contentsGetter(), existingFileHelper));
         //配方数据生成
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
+        //
+        generator.addProvider(event.includeServer(), new ModDatapackProvider(packOutput, lookupProvider));
     }
 }

@@ -66,5 +66,7 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add("item.minecraft.potion.effect.slime_potion", "slime potion");
         add("item.minecraft.splash_potion.effect.slime_potion", "splash slime potion");
         add("item.minecraft.lingering_potion.effect.slime_potion", "lingering slime potion");
+        //附魔
+        add("enchantment.demonworlds.lightning_enchantment", "lightning enchantment");
     }
 }

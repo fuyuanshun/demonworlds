@@ -37,5 +37,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.END_LEGGINS.get())
                 .add(ModItems.END_BOOTS.get())
                 ;
+
+        tag(ItemTags.WEAPON_ENCHANTABLE)
+                .add(ModItems.END_SWORD.get())
+                ;
+        tag(ItemTags.SWORD_ENCHANTABLE)
+                .add(ModItems.END_SWORD.get());
     }
 }
