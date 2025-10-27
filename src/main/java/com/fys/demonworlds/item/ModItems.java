@@ -1,7 +1,7 @@
 package com.fys.demonworlds.item;
 
 import com.fys.demonworlds.constants.ModConstants;
-import com.fys.demonworlds.item.customer.*;
+import com.fys.demonworlds.item.custom.*;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;

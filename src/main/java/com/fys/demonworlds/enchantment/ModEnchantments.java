@@ -2,27 +2,18 @@ package com.fys.demonworlds.enchantment;
 
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.enchantment.custom.LightningEnchantmentEffect;
-import com.mojang.serialization.MapCodec;
-import net.minecraft.advancements.critereon.DamageSourcePredicate;
-import net.minecraft.advancements.critereon.TagPredicate;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.enchantment.EnchantmentTarget;
-import net.minecraft.world.item.enchantment.LevelBasedValue;
-import net.minecraft.world.item.enchantment.effects.AddValue;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.storage.loot.predicates.DamageSourceCondition;
 
 /**
  * 参考 net.minecraft.world.item.enchantment.Enchantments类;

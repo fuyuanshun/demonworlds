@@ -66,6 +66,6 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         add("item.minecraft.splash_potion.effect.slime_potion", "喷溅史莱姆药水");
         add("item.minecraft.lingering_potion.effect.slime_potion", "滞留史莱姆药水");
         //附魔
-        add("enchantment.demonworlds.lightning_enchantment", "雷电");
+        add("enchantment.demonworlds.lightning_enchantment", "雷电附加");
     }
 }

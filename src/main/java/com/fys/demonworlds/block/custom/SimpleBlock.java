@@ -1,4 +1,4 @@
-package com.fys.demonworlds.block.customer;
+package com.fys.demonworlds.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;

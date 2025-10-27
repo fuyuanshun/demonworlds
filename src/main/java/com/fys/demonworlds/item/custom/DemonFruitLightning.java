@@ -1,4 +1,4 @@
-package com.fys.demonworlds.item.customer;
+package com.fys.demonworlds.item.custom;
 
 import com.fys.demonworlds.item.foods.ModFoods;
 import net.minecraft.client.gui.screens.Screen;

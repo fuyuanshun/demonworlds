@@ -1,9 +1,7 @@
-package com.fys.demonworlds.item.customer;
+package com.fys.demonworlds.item.custom;
 
 import com.fys.demonworlds.block.component.ModDataComponents;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;

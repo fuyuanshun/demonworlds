@@ -1,7 +1,6 @@
 package com.fys.demonworlds.block;
 
-import com.fys.demonworlds.DemonWorlds;
-import com.fys.demonworlds.block.customer.SimpleBlock;
+import com.fys.demonworlds.block.custom.SimpleBlock;
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -13,7 +12,6 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 /**
  * 模组方块注册类

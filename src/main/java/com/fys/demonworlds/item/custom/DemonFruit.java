@@ -1,4 +1,4 @@
-package com.fys.demonworlds.item.customer;
+package com.fys.demonworlds.item.custom;
 
 import com.fys.demonworlds.util.Utils;
 import net.minecraft.world.entity.LivingEntity;

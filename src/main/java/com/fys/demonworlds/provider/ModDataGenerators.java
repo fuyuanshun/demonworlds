@@ -54,5 +54,7 @@ public class ModDataGenerators {
         generator.addProvider(event.includeServer(), new ModEnchantmentTagsProvider(packOutput, lookupProvider, existingFileHelper));
         //
         generator.addProvider(event.includeServer(), new ModDatapackProvider(packOutput, lookupProvider));
+        //neoforge
+        generator.addProvider(event.includeServer(), new ModNeoForgeProvider(packOutput, lookupProvider));
     }
 }
