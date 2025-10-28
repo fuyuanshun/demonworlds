@@ -7,20 +7,19 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import java.util.function.Supplier;
 
 /**
  * @author fys
- * @date 2025/10/26
- * @description
+ * @since 2025-10-28
  */
 public class ModEnchantmentEffects {
 
-    public static final DeferredRegister<MapCodec<? extends EnchantmentEntityEffect>> EFFECTS = DeferredRegister.create(Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE, ModConstants.MOD_ID);
+    public static final DeferredRegister<MapCodec<? extends EnchantmentEntityEffect>> EFFECTS =
+            DeferredRegister.create(Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE, ModConstants.MOD_ID);
 
-    public static final Holder<MapCodec<? extends EnchantmentEntityEffect>> LIGHTNING_EFF = EFFECTS.register("lightning_enchantment", ()-> LightningEnchantmentEffect.CODEC);
+    public static final DeferredHolder<MapCodec<? extends EnchantmentEntityEffect>, MapCodec<LightningEnchantmentEffect>> LIGHTNING_EFFECT = EFFECTS.register("lightning_enchantment", () -> LightningEnchantmentEffect.CODEC);
 
     public static void registerEnchantment(IEventBus eventBus){
         EFFECTS.register(eventBus);
