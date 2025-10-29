@@ -36,7 +36,7 @@ public class ModBiomeModifiers {
         ));
 
         context.register(ADD_ORE_END, new BiomeModifiers.AddFeaturesBiomeModifier(
-                biome.getOrThrow(BiomeTags.IS_OVERWORLD),
+                biome.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.ORE_END_PLACED)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));

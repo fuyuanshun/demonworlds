@@ -40,6 +40,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.SUN_ORE.get())
         ;
 
+        tag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
+                .add(ModBlocks.SUN_BLOCK.get())
+                .add(ModBlocks.SUN_ORE.get())
+        ;
+
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.END_BLOCK.get())
                 .add(ModBlocks.END_ORE.get())
