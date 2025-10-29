@@ -3,7 +3,7 @@ package com.fys.demonworlds.provider;
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.enchantment.ModEnchantments;
 import com.fys.demonworlds.wordgen.ModBiomeModifiers;
-import com.fys.demonworlds.wordgen.ModConfiguredFeatures;
+import com.fys.demonworlds.wordgen.ModConfiguredFeature;
 import com.fys.demonworlds.wordgen.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
@@ -24,7 +24,7 @@ public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
 
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.ENCHANTMENT, ModEnchantments::bootstrap)
-            .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
+            .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeature::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
             .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
             ;
