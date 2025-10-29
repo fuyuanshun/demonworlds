@@ -17,23 +17,23 @@ import net.minecraft.world.item.enchantment.EnchantmentTarget;
 
 /**
  * @author fys
- * @since 2025-10-28
+ * @since 2025-10-29
  */
 public class ModEnchantments {
 
-    public static final ResourceKey<Enchantment> LIGHTNING_EFFECT = ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "lightning_enchantment"));
+    public static final ResourceKey<Enchantment> LIGHTNING_ENCHANTMENT = ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "lightning_enchantment"));
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
-        HolderGetter<Enchantment> enchantmentHolderGetter = context.lookup(Registries.ENCHANTMENT);
-        HolderGetter<Item> itemHolderGetter = context.lookup(Registries.ITEM);
+        HolderGetter<Enchantment> enchantment = context.lookup(Registries.ENCHANTMENT);
+        HolderGetter<Item> item = context.lookup(Registries.ITEM);
 
         register(
                 context,
-                LIGHTNING_EFFECT,
+                LIGHTNING_ENCHANTMENT,
                 Enchantment.enchantment(
                         Enchantment.definition(
-                                itemHolderGetter.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
-                                itemHolderGetter.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
+                                item.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                                item.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
                                 5,
                                 2,
                                 Enchantment.dynamicCost(5, 7),
@@ -41,14 +41,13 @@ public class ModEnchantments {
                                 4,
                                 EquipmentSlotGroup.MAINHAND
                         )
+                ).exclusiveWith(enchantment.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE))
+                .withEffect(
+                        EnchantmentEffectComponents.POST_ATTACK,
+                        EnchantmentTarget.ATTACKER,
+                        EnchantmentTarget.VICTIM,
+                        new LightningEnchantmentEffect()
                 )
-                        .exclusiveWith(enchantmentHolderGetter.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE))
-                        .withEffect(
-                                EnchantmentEffectComponents.POST_ATTACK,
-                                EnchantmentTarget.ATTACKER,
-                                EnchantmentTarget.VICTIM,
-                                new LightningEnchantmentEffect()
-                        )
                 );
 
     }
@@ -56,4 +55,5 @@ public class ModEnchantments {
     private static void register(BootstrapContext<Enchantment> context, ResourceKey<Enchantment> key, Enchantment.Builder builder) {
         context.register(key, builder.build(key.location()));
     }
+
 }
