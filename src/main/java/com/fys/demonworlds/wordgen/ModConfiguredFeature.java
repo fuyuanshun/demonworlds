@@ -1,5 +1,6 @@
 package com.fys.demonworlds.wordgen;
 
+import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.constants.ModConstants;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -10,6 +11,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
@@ -26,8 +28,8 @@ public class ModConfiguredFeature {
         TagMatchTest tagMatchTest = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         BlockMatchTest blockMatchTest = new BlockMatchTest(Blocks.END_STONE);
 
-        context.register(SUN_ORE_CONFIGURED, Feature.ORE, );
-        context.register(END_ORE_CONFIGURED, Feature.ORE, );
+        register(context, SUN_ORE_CONFIGURED, Feature.ORE, new OreConfiguration(tagMatchTest, ModBlocks.SUN_ORE.get().defaultBlockState(), 9));
+        register(context, END_ORE_CONFIGURED, Feature.ORE, new OreConfiguration(blockMatchTest, ModBlocks.END_ORE.get().defaultBlockState(), 9));
 
     }
 
