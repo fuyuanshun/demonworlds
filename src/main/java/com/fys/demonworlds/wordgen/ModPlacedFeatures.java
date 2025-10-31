@@ -2,6 +2,7 @@ package com.fys.demonworlds.wordgen;
 
 import com.fys.demonworlds.constants.ModConstants;
 import net.minecraft.core.Holder;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -15,16 +16,14 @@ import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import java.util.List;
 
 /**
- *
- * 定义生成位置（矿物、生物、结构）
- *
  * @author fys
- * @since 2025-10-29
+ * @since 2025-10-31
  */
 public class ModPlacedFeatures {
 
-    public static void bootstrap(BootstrapContext<PlacedFeature> context){
-        context.lookup(Registries.CONFIGURED_FEATURE);
+    public static void bootstrap(BootstrapContext<PlacedFeature> context) {
+        HolderGetter<ConfiguredFeature<?, ?>> configuredFeature = context.lookup(Registries.CONFIGURED_FEATURE);
+
     }
 
     public static ResourceKey<PlacedFeature> createKey(String name) {
@@ -33,8 +32,9 @@ public class ModPlacedFeatures {
 
     public static void register(
             BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
-            Holder<ConfiguredFeature<?,?>> feature, List<PlacementModifier> placementModifierList
+            Holder<ConfiguredFeature<?,?>> feature, List<PlacementModifier> modifiers
     ) {
-        context.register(key, new PlacedFeature(feature, placementModifierList));
+        context.register(key, new PlacedFeature(feature, List.copyOf(modifiers)));
     }
+
 }

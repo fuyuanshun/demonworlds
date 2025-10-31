@@ -11,7 +11,7 @@ import net.minecraft.world.phys.Vec3;
 
 /**
  * @author fys
- * @since 2025-10-29
+ * @since 2025-10-31
  */
 public class LightningEnchantmentEffect implements EnchantmentEntityEffect {
 
@@ -21,9 +21,6 @@ public class LightningEnchantmentEffect implements EnchantmentEntityEffect {
     public void apply(ServerLevel level, int enchantmentLevel, EnchantedItemInUse item, Entity entity, Vec3 origin) {
         if(enchantmentLevel == 1){
             EntityType.LIGHTNING_BOLT.spawn(level, entity.getOnPos(), MobSpawnType.TRIGGERED);
-        } else if(enchantmentLevel == 2){
-            EntityType.FIREBALL.spawn(level, entity.getOnPos(), MobSpawnType.TRIGGERED);
-            EntityType.ENDER_DRAGON.spawn(level, entity.getOnPos(), MobSpawnType.TRIGGERED);
         }
     }
 
@@ -31,4 +28,6 @@ public class LightningEnchantmentEffect implements EnchantmentEntityEffect {
     public MapCodec<? extends EnchantmentEntityEffect> codec() {
         return CODEC;
     }
+
+
 }
