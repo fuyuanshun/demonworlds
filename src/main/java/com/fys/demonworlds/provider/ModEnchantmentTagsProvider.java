@@ -20,8 +20,8 @@ import java.util.concurrent.CompletableFuture;
  */
 public class ModEnchantmentTagsProvider extends EnchantmentTagsProvider {
 
-    public ModEnchantmentTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, ModConstants.MOD_ID, existingFileHelper);
+    public ModEnchantmentTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(output, lookupProvider, ModConstants.MOD_ID);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class ModEnchantmentTagsProvider extends EnchantmentTagsProvider {
         tag(EnchantmentTags.IN_ENCHANTING_TABLE)
                 //这种方式发生在bootstrap之前，无法进行注册，需要使用下面的方式，可以注册“可能存在但尚未注册”的附魔
 //                .add(ModEnchantments.LIGHTNING_ENCHANTMENT)
-                .addOptional(ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "lightning_enchantment"))
+                .addOptional(ModEnchantments.LIGHTNING_ENCHANTMENT)
         ;
     }
 }
