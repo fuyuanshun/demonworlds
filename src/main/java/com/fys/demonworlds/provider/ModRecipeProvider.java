@@ -8,7 +8,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
-import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -18,17 +17,18 @@ import java.util.concurrent.CompletableFuture;
  * @date 2025/10/22
  * @description
  */
-public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+public class ModRecipeProvider extends RecipeProvider {
 
     public static final List<ItemLike> SUN_BLOCK_ORE = List.of(ModBlocks.SUN_ORE);
     public static final List<ItemLike> END_BLOCK_ORE = List.of(ModBlocks.END_ORE);
 
-    public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries);
+    protected ModRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
+        super(registries, output);
     }
 
+
     @Override
-    protected void buildRecipes(RecipeOutput recipeOutput) {
+    protected void buildRecipes() {
         //熔炉配方
         oreSmelting(recipeOutput, SUN_BLOCK_ORE, RecipeCategory.MISC, ModBlocks.SUN_BLOCK, 0.8F, 200, "sun_block");
         oreBlasting(recipeOutput, SUN_BLOCK_ORE, RecipeCategory.MISC, ModBlocks.SUN_BLOCK, 0.8F, 200, "sun_block");

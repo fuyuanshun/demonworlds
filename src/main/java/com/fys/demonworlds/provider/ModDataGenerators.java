@@ -1,17 +1,13 @@
 package com.fys.demonworlds.provider;
 
-import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.constants.ModConstants;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.Collections;
@@ -32,9 +28,8 @@ public class ModDataGenerators {
         PackOutput packOutput = generator.getPackOutput();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         //方块生成 包含方块状态、方块物品
-        generator.addProvider(true, new ModBlockStateProvider(packOutput));
+        generator.addProvider(true, new ModModelProvider(packOutput));
         //物品生成
-        generator.addProvider(true, new ModItemModelProvider(packOutput));
         //语言数据生成
         generator.addProvider(true, new ModZHCNLanguageProvider(packOutput));
         generator.addProvider(true, new ModENUSLanguageProvider(packOutput));
@@ -51,14 +46,14 @@ public class ModDataGenerators {
                 List.of(new LootTableProvider.SubProviderEntry(ModLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
         //标签数据生成
         //方块标签
-        ModBlockTagsProvider modBlockTagsProvider = new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper);
+        ModBlockTagsProvider modBlockTagsProvider = new ModBlockTagsProvider(packOutput, lookupProvider);
         generator.addProvider(true, modBlockTagsProvider);
         //物品标签
-        generator.addProvider(true, new ModItemTagsProvider(packOutput, lookupProvider, modBlockTagsProvider.contentsGetter(), existingFileHelper));
+        generator.addProvider(true, new ModItemTagsProvider(packOutput, lookupProvider));
         //配方数据生成
-        generator.addProvider(true, new ModRecipeProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModRecipeProvider(lookupProvider, packOutput));
         //附魔台列表数据生成
-        generator.addProvider(true, new ModEnchantmentTagsProvider(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(true, new ModEnchantmentTagsProvider(packOutput, lookupProvider));
         //
         generator.addProvider(true, new ModDatapackProvider(packOutput, lookupProvider));
         //neoforge

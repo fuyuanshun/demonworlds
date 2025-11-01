@@ -15,10 +15,10 @@ import net.minecraft.resources.ResourceLocation;
  * @author fys
  * @since 2025-10-22
  */
-public class ModBlockStateProvider extends ModelProvider {
+public class ModModelProvider extends ModelProvider {
 
 
-    public ModBlockStateProvider(PackOutput output, String modId) {
+    public ModModelProvider(PackOutput output) {
         super(output, ModConstants.MOD_ID);
     }
 
@@ -28,13 +28,16 @@ public class ModBlockStateProvider extends ModelProvider {
        itemModels.generateFlatItem(ModItems.DEMON_FRUIT_MOON.get(), ModelTemplates.FLAT_ITEM);
        itemModels.generateFlatItem(ModItems.DEMON_FRUIT_LIGHTNING.get(), ModelTemplates.FLAT_ITEM);
 
-       itemModels.generateFlatItem(ModItems.END_SWORD.get(), ModelTemplates.FLAT_ITEM);
-       itemModels.generateFlatItem(ModItems.END_AXE.get(), ModelTemplates.FLAT_ITEM);
-       itemModels.generateFlatItem(ModItems.END_PICKAXE.get(), ModelTemplates.FLAT_ITEM);
-       itemModels.generateFlatItem(ModItems.END_HOE.get(), ModelTemplates.FLAT_ITEM);
-       itemModels.generateFlatItem(ModItems.END_SHOVEL.get(), ModelTemplates.FLAT_ITEM);
+       itemModels.generateFlatItem(ModItems.END_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+       itemModels.generateFlatItem(ModItems.END_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+       itemModels.generateFlatItem(ModItems.END_PICKAXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+       itemModels.generateFlatItem(ModItems.END_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+       itemModels.generateFlatItem(ModItems.END_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
 
-       itemModels.generateTrimmableItem(ModItems.END_HELMET.get(), ModArmorMaterials.END, ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, ""), false);
+       itemModels.generateTrimmableItem(ModItems.END_HELMET.get(), ModArmorMaterials.END, ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "end"), false);
+       itemModels.generateTrimmableItem(ModItems.END_CHESTPLATE.get(), ModArmorMaterials.END, ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "end"), false);
+       itemModels.generateTrimmableItem(ModItems.END_LEGGINS.get(), ModArmorMaterials.END, ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "end"), false);
+       itemModels.generateTrimmableItem(ModItems.END_BOOTS.get(), ModArmorMaterials.END, ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID, "end"), false);
 
 
         blockModels.createTrivialCube(ModBlocks.SUN_BLOCK.get());
