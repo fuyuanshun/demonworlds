@@ -2,14 +2,10 @@ package com.fys.demonworlds.provider;
 
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.enchantment.ModEnchantments;
-import com.fys.demonworlds.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.EnchantmentTagsProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.EnchantmentTags;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 

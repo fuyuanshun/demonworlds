@@ -27,34 +27,41 @@ public class ModDataGenerators {
 
     //方块注册 blockstate/*.json models/block/*.json models/item/*.json
     @SubscribeEvent
-    public static void gatherData(GatherDataEvent event){
+    public static void gatherData(GatherDataEvent.Client event){
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
-        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         //方块生成 包含方块状态、方块物品
-        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(true, new ModBlockStateProvider(packOutput));
         //物品生成
-        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(true, new ModItemModelProvider(packOutput));
         //语言数据生成
-        generator.addProvider(event.includeClient(), new ModZHCNLanguageProvider(packOutput));
-        generator.addProvider(event.includeClient(), new ModENUSLanguageProvider(packOutput));
+        generator.addProvider(true, new ModZHCNLanguageProvider(packOutput));
+        generator.addProvider(true, new ModENUSLanguageProvider(packOutput));
+
+    }
+
+    @SubscribeEvent
+    public static void gatherData(GatherDataEvent.Server event){
+        DataGenerator generator = event.getGenerator();
+        PackOutput packOutput = generator.getPackOutput();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         //战利品列表数据生成
-        generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
+        generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(ModLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
         //标签数据生成
         //方块标签
         ModBlockTagsProvider modBlockTagsProvider = new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper);
-        generator.addProvider(event.includeServer(), modBlockTagsProvider);
+        generator.addProvider(true, modBlockTagsProvider);
         //物品标签
-        generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider, modBlockTagsProvider.contentsGetter(), existingFileHelper));
+        generator.addProvider(true, new ModItemTagsProvider(packOutput, lookupProvider, modBlockTagsProvider.contentsGetter(), existingFileHelper));
         //配方数据生成
-        generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModRecipeProvider(packOutput, lookupProvider));
         //附魔台列表数据生成
-        generator.addProvider(event.includeServer(), new ModEnchantmentTagsProvider(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(true, new ModEnchantmentTagsProvider(packOutput, lookupProvider, existingFileHelper));
         //
-        generator.addProvider(event.includeServer(), new ModDatapackProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModDatapackProvider(packOutput, lookupProvider));
         //neoforge
-        generator.addProvider(event.includeServer(), new ModNeoForgeProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModNeoForgeProvider(packOutput, lookupProvider));
     }
 }

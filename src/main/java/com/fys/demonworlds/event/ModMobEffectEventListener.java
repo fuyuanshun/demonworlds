@@ -77,7 +77,7 @@ public class ModMobEffectEventListener {
 
             ListTag effectsList = new ListTag();
             player.getActiveEffects().forEach(effect -> {
-                CompoundTag playerTag = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+                CompoundTag playerTag = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG).get();
 
                 if(ModConstants.UN_CLEAR_EFFECT_LIST.contains(effect.getEffect())){
                     ResourceLocation effectId = BuiltInRegistries.MOB_EFFECT.getKey(effect.getEffect().value());
@@ -109,16 +109,17 @@ public class ModMobEffectEventListener {
     @SubscribeEvent
     public static void onPlayerRespawn(PlayerEvent.PlayerRespawnEvent event){
         Player player = event.getEntity();
-        CompoundTag persistentData = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        CompoundTag persistentData = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG).get();
         ListTag savedEffects = (ListTag) persistentData.get(ModConstants.NBT_SAVED_EFFECT_LIST);
         if(savedEffects!=null){
             for(Tag tag : savedEffects){
                 if(tag instanceof CompoundTag ct){
-                    MobEffectInstance load = MobEffectInstance.load(ct);
-                    // 3. 重新添加效果
-                    if(load!=null){
-                        player.addEffect(load);
-                    }
+                    //TODO
+//                    MobEffectInstance load = MobEffectInstance.load(ct);
+//                    // 3. 重新添加效果
+//                    if(load!=null){
+//                        player.addEffect(load);
+//                    }
                 }
             }
             // 4. 清除已恢复的 NBT 数据（避免重复恢复）
