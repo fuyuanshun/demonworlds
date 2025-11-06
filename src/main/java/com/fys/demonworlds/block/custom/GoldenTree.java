@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.Nullable;
@@ -39,11 +40,12 @@ public class GoldenTree extends RotatedPillarBlock {
     @Override
     public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate) {
         //斧头
-        if(context.getItemInHand().getItem() instanceof AxeItem){
+        if(itemAbility == ItemAbilities.AXE_STRIP && context.getItemInHand().getItem() instanceof AxeItem){
             for(DeferredBlock<Block> deferredBlock : STRIPPABLES.keySet()){
                 Block block = deferredBlock.get();
                 if(state.is(block)){
-                    return block.defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
+                    Block strippedBlock = STRIPPABLES.get(deferredBlock).get();
+                    return strippedBlock.defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
                 }
             }
         }
