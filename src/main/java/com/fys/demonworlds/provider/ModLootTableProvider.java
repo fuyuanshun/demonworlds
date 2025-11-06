@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
@@ -38,6 +39,14 @@ public class ModLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.END_ORE.get());
         dropSelf(ModBlocks.SIMPLE_BLOCK.get());
 
+        dropSelf(ModBlocks.GOLDEN_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_GOLDEN_LOG.get());
+        dropSelf(ModBlocks.GOLDEN_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_GOLDEN_WOOD.get());
+        dropSelf(ModBlocks.GOLDEN_PLANK.get());
+        dropSelf(ModBlocks.GOLDEN_SAPLING.get());
+        //树叶掉落树苗
+        add(ModBlocks.GOLDEN_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.GOLDEN_SAPLING.get(), new float[]{0.05F, 0.0625F, 0.083333336F, 0.1F}));
     }
 
     /**
