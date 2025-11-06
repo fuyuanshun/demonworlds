@@ -1,6 +1,8 @@
 package com.fys.demonworlds.potion;
 
 import com.fys.demonworlds.constants.ModConstants;
+import com.fys.demonworlds.effect.ModMobEffects;
+import com.fys.demonworlds.effect.ModSlimeEffect;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -21,7 +23,10 @@ public class ModPotions {
 
     //史莱姆药水
     public static final Holder<Potion> SLIME_POTION = POTIONS.register("slime_potion",
-            ()->new Potion(new MobEffectInstance(MobEffects.GLOWING, 2000, 1)));
+            ()->new Potion(
+                    new MobEffectInstance(MobEffects.GLOWING, 2000, 1),
+                    new MobEffectInstance(ModMobEffects.SLIME, 2000, 1)
+            ));
 
     public static void registerPotions(IEventBus eventBus) {
         POTIONS.register(eventBus);
