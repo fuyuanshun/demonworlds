@@ -6,6 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 /**
@@ -17,7 +18,7 @@ public class ModEntityType {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPE =
             DeferredRegister.create(Registries.ENTITY_TYPE, ModConstants.MOD_ID);
 
-    public static final Object GECKO = ENTITY_TYPE.register("gecko",
+    public static final DeferredHolder<EntityType<?>, EntityType<GeckoEntity>> GECKO = ENTITY_TYPE.register("gecko",
             () -> EntityType.Builder.of(GeckoEntity::new, MobCategory.CREATURE).build("gecko")
     );
 
