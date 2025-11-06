@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "demonworlds:block/golden_log_top",
+    "side": "demonworlds:block/golden_log"
+  }
+}

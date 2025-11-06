@@ -35,9 +35,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> STRIPPED_GOLDEN_LOG = register("stripped_golden_log", GoldenTree::new, BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG));
     public static final DeferredBlock<Block> STRIPPED_GOLDEN_WOOD = register("stripped_golden_wood", GoldenTree::new, BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD));
 
-    public static final DeferredBlock<Block> GOLDEN_PLANK = register("golden_plank", GoldenTree::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
-    public static final DeferredBlock<Block> GOLDEN_LEAVES = register("golden_leaves", GoldenTree::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES));
-    public static final DeferredBlock<Block> GOLDEN_SAPLING = register("golden_sapling", GoldenTree::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
+    public static final DeferredBlock<Block> GOLDEN_PLANK = register("golden_plank", Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
+    public static final DeferredBlock<Block> GOLDEN_LEAVES = register("golden_leaves", Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES));
+    public static final DeferredBlock<Block> GOLDEN_SAPLING = register("golden_sapling", Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING));
 
     public static DeferredBlock<Block> register(String name, Function<BlockBehaviour.Properties, ? extends Block> func, BlockBehaviour.Properties block){
         DeferredBlock<Block> sunBlock = BLOCKS.registerBlock(name, func, block);

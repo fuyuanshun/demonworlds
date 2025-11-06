@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.ItemAbility;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
@@ -22,9 +23,9 @@ import java.util.Map;
  */
 public class GoldenTree extends RotatedPillarBlock {
 
-    protected static final Map<Block, Block> STRIPPABLES = new ImmutableMap.Builder<Block, Block>()
-            .put(ModBlocks.GOLDEN_LOG.get(), ModBlocks.STRIPPED_GOLDEN_LOG.get())
-            .put(ModBlocks.GOLDEN_WOOD.get(), ModBlocks.STRIPPED_GOLDEN_WOOD.get())
+    protected static final Map<DeferredBlock<Block>, DeferredBlock<Block>> STRIPPABLES = new ImmutableMap.Builder<DeferredBlock<Block>, DeferredBlock<Block>>()
+            .put(ModBlocks.GOLDEN_LOG, ModBlocks.STRIPPED_GOLDEN_LOG)
+            .put(ModBlocks.GOLDEN_WOOD, ModBlocks.STRIPPED_GOLDEN_WOOD)
             .build();
     public GoldenTree(Properties properties) {
         super(properties);
@@ -39,8 +40,12 @@ public class GoldenTree extends RotatedPillarBlock {
     public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate) {
         //斧头
         if(context.getItemInHand().getItem() instanceof AxeItem){
-            Block block = STRIPPABLES.get(state.getBlock());
-            return block != null ? block.defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS)) : null;
+            for(DeferredBlock<Block> deferredBlock : STRIPPABLES.keySet()){
+                Block block = deferredBlock.get();
+                if(state.is(block)){
+                    return block.defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS));
+                }
+            }
         }
 
         return super.getToolModifiedState(state, context, itemAbility, simulate);
