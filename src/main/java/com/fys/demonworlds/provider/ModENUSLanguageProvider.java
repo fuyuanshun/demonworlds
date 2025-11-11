@@ -53,6 +53,14 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add(ModBlocks.END_BLOCK.get(), "end block");
         add(ModBlocks.END_ORE.get(), "end ore");
         add(ModBlocks.SIMPLE_BLOCK.get(), "Magic blocks");
+        //树
+        add(ModBlocks.GOLDEN_LOG.get(), "golden log");
+        add(ModBlocks.STRIPPED_GOLDEN_LOG.get(), "stripped golden log");
+        add(ModBlocks.GOLDEN_WOOD.get(), "golden wood");
+        add(ModBlocks.STRIPPED_GOLDEN_WOOD.get(), "stripped golden wood");
+        add(ModBlocks.GOLDEN_PLANK.get(), "golden plank");
+        add(ModBlocks.GOLDEN_LEAVES.get(), "golden leaves");
+        add(ModBlocks.GOLDEN_SAPLING.get(), "golden sapling");
         //物品描述
         add("item.demonworlds.demon_fruit_sun.desc", "\u00A76Curse from the Ancient Demon - Sun Demon");
         add("item.demonworlds.demon_fruit_moon.desc", "\u00A76Curse from the Ancient Demon - Moon Demon");

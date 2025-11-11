@@ -82,6 +82,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SIMPLE_BLOCK);
                         output.accept(ModItems.MF);
                         output.accept(ModItems.DARK_DUST);
+                        output.accept(ModBlocks.GOLDEN_LOG);
+                        output.accept(ModBlocks.STRIPPED_GOLDEN_LOG);
+                        output.accept(ModBlocks.GOLDEN_WOOD);
+                        output.accept(ModBlocks.STRIPPED_GOLDEN_WOOD);
+                        output.accept(ModBlocks.GOLDEN_PLANK);
+                        output.accept(ModBlocks.GOLDEN_LEAVES);
+                        output.accept(ModBlocks.GOLDEN_SAPLING);
                     })
                     .build());
 

@@ -52,6 +52,14 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         add(ModBlocks.END_BLOCK.get(), "末影石");
         add(ModBlocks.END_ORE.get(), "末影原矿");
         add(ModBlocks.SIMPLE_BLOCK.get(), "神奇的方块");
+        //树
+        add(ModBlocks.GOLDEN_LOG.get(), "黄金原木");
+        add(ModBlocks.STRIPPED_GOLDEN_LOG.get(), "去皮黄金原木");
+        add(ModBlocks.GOLDEN_WOOD.get(), "黄金木");
+        add(ModBlocks.STRIPPED_GOLDEN_WOOD.get(), "去皮黄金木");
+        add(ModBlocks.GOLDEN_PLANK.get(), "黄金木板");
+        add(ModBlocks.GOLDEN_LEAVES.get(), "黄金树叶");
+        add(ModBlocks.GOLDEN_SAPLING.get(), "黄金树苗");
         //物品描述
         add("item.demonworlds.demon_fruit_sun.desc", "\u00A76来自远古恶魔的诅咒-太阳之恶魔");
         add("item.demonworlds.demon_fruit_moon.desc", "\u00A76来自远古恶魔的诅咒-月亮之恶魔");

@@ -1,5 +1,6 @@
 package com.fys.demonworlds.provider;
 
+import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.item.ModItems;
 import com.fys.demonworlds.tags.ModItemTags;
@@ -28,7 +29,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(ModItemTags.CLEAR_CURSE_MATERIAL)
-//                .add(ModI)
+                .add(ModItems.DARK_DUST.get())
         ;
 
         tag(ItemTags.TRIMMABLE_ARMOR)
@@ -43,5 +44,13 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 ;
         tag(ItemTags.SWORD_ENCHANTABLE)
                 .add(ModItems.END_SWORD.get());
+
+        tag(ItemTags.LOGS_THAT_BURN)
+//                .add(ModBlocks.GOLDEN_LOG.get().asItem())
+//                .add(ModBlocks.STRIPPED_GOLDEN_LOG.get().asItem())
+//                .add(ModBlocks.GOLDEN_WOOD.get().asItem())
+//                .add(ModBlocks.STRIPPED_GOLDEN_WOOD.get().asItem())
+//                .add(ModBlocks.GOLDEN_PLANK.get().asItem())
+                ;
     }
 }

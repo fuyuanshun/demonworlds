@@ -69,5 +69,13 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(ModBlockTags.INCORRECT_FOR_SUN_TOOL)
 //                .addTag(BlockTags.NEEDS_DIAMOND_TOOL)
         ;
+
+        tag(BlockTags.LOGS_THAT_BURN)
+//                .add(ModBlocks.GOLDEN_LOG.get())
+//                .add(ModBlocks.STRIPPED_GOLDEN_LOG.get())
+//                .add(ModBlocks.GOLDEN_WOOD.get())
+//                .add(ModBlocks.STRIPPED_GOLDEN_WOOD.get())
+//                .add(ModBlocks.GOLDEN_PLANK.get())
+                ;
     }
 }

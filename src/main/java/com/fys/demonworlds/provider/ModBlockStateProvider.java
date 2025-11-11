@@ -3,7 +3,9 @@ package com.fys.demonworlds.provider;
 import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.block.custom.GoldenTree;
 import com.fys.demonworlds.constants.ModConstants;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.neoforged.neoforge.client.model.generators.*;
@@ -31,9 +33,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         logBlock((RotatedPillarBlock) ModBlocks.GOLDEN_LOG.get());
         axisBlock((RotatedPillarBlock) ModBlocks.GOLDEN_WOOD.get(), blockTexture(ModBlocks.GOLDEN_LOG.get()), blockTexture(ModBlocks.GOLDEN_LOG.get()));
 
-//        simpleBlockItem(ModBlocks.GOLDEN_LOG.get(), new ModelFile.UncheckedModelFile("demonworlds:block/" + ModBlocks.GOLDEN_LOG.getId().getPath()));
-//        simpleBlockItem(ModBlocks.GOLDEN_WOOD.get(), new ModelFile.UncheckedModelFile("demonworlds:block/" + ModBlocks.GOLDEN_WOOD.getId().getPath()));
+        simpleBlockItem(ModBlocks.GOLDEN_LOG.get(), new ModelFile.UncheckedModelFile("demonworlds:block/" + ModBlocks.GOLDEN_LOG.getId().getPath()));
+        simpleBlockItem(ModBlocks.GOLDEN_WOOD.get(), new ModelFile.UncheckedModelFile("demonworlds:block/" + ModBlocks.GOLDEN_WOOD.getId().getPath()));
 
-//        simpleBlockWithItem(ModBlocks.GOLDEN_LEAVES.get(), models().singleTexture());
+        simpleBlockWithItem(ModBlocks.GOLDEN_LEAVES.get(),
+                models().singleTexture(
+                            BuiltInRegistries.BLOCK.getKey(ModBlocks.GOLDEN_LEAVES.get()).getPath(),
+                            ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(ModBlocks.GOLDEN_LEAVES.get())
+                        )
+                        .renderType("cutout"));
+
+        simpleBlock(ModBlocks.GOLDEN_SAPLING.get(),
+                models().cross(BuiltInRegistries.BLOCK.getKey(ModBlocks.GOLDEN_SAPLING.get()).getPath(),
+                        blockTexture(ModBlocks.GOLDEN_SAPLING.get())).renderType("cutout"));
     }
 }
