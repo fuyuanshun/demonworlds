@@ -30,11 +30,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //自定义3D模型方块，不写数据生成
 //        simpleBlockWithItem(ModBlocks.SIMPLE_BLOCK.get(), cubeAll(ModBlocks.SIMPLE_BLOCK.get()));
 
+
         logBlock((RotatedPillarBlock) ModBlocks.GOLDEN_LOG.get());
+        logBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GOLDEN_LOG.get());
         axisBlock((RotatedPillarBlock) ModBlocks.GOLDEN_WOOD.get(), blockTexture(ModBlocks.GOLDEN_LOG.get()), blockTexture(ModBlocks.GOLDEN_LOG.get()));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GOLDEN_WOOD.get(), blockTexture(ModBlocks.STRIPPED_GOLDEN_LOG.get()), blockTexture(ModBlocks.STRIPPED_GOLDEN_LOG.get()));
 
         simpleBlockItem(ModBlocks.GOLDEN_LOG.get(), new ModelFile.UncheckedModelFile("demonworlds:block/" + ModBlocks.GOLDEN_LOG.getId().getPath()));
+        simpleBlockItem(ModBlocks.STRIPPED_GOLDEN_LOG.get(), new ModelFile.UncheckedModelFile("demonworlds:block/" + ModBlocks.STRIPPED_GOLDEN_LOG.getId().getPath()));
         simpleBlockItem(ModBlocks.GOLDEN_WOOD.get(), new ModelFile.UncheckedModelFile("demonworlds:block/" + ModBlocks.GOLDEN_WOOD.getId().getPath()));
+        simpleBlockItem(ModBlocks.STRIPPED_GOLDEN_WOOD.get(), new ModelFile.UncheckedModelFile("demonworlds:block/" + ModBlocks.STRIPPED_GOLDEN_WOOD.getId().getPath()));
+
+        simpleBlockWithItem(ModBlocks.GOLDEN_PLANK.get(), cubeAll(ModBlocks.GOLDEN_PLANK.get()));
 
         simpleBlockWithItem(ModBlocks.GOLDEN_LEAVES.get(),
                 models().singleTexture(

@@ -1,5 +1,6 @@
 package com.fys.demonworlds.provider;
 
+import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.item.ModItems;
 import net.minecraft.data.PackOutput;
@@ -63,6 +64,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.END_BOOTS);
         //燃料
         basicItem(ModItems.DARK_DUST.get());
+
+        withExistingParent(ModBlocks.GOLDEN_SAPLING.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID,"block/" + ModBlocks.GOLDEN_SAPLING.getId().getPath()));
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {
