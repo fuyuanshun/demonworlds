@@ -20,6 +20,9 @@ import org.jetbrains.annotations.Nullable;
  */
 public class GeckoEntity extends Animal {
 
+    public final AnimationState idleAnimationState = new AnimationState();
+    private int idleAnimationTimeout = 0;
+
     public GeckoEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
@@ -50,5 +53,23 @@ public class GeckoEntity extends Animal {
     @Override
     public EntityDimensions getDefaultDimensions(Pose pose) {
         return this.isBaby() ? ModEntityType.GECKO.get().getDimensions().scale(0.5F).withEyeHeight(0.665F) : super.getDefaultDimensions(pose);
+    }
+
+    private void setupAnimationStates() {
+        if(this.idleAnimationTimeout <= 0) {
+            this.idleAnimationTimeout = 80;
+            this.idleAnimationState.start(this.tickCount);
+        } else {
+            --this.idleAnimationTimeout;
+        }
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+
+        if(this.level().isClientSide()) {
+            this.setupAnimationStates();
+        }
     }
 }
