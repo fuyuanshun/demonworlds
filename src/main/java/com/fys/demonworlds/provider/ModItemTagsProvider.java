@@ -46,11 +46,10 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.END_SWORD.get());
 
         tag(ItemTags.LOGS_THAT_BURN)
-//                .add(ModBlocks.GOLDEN_LOG.get().asItem())
-//                .add(ModBlocks.STRIPPED_GOLDEN_LOG.get().asItem())
-//                .add(ModBlocks.GOLDEN_WOOD.get().asItem())
-//                .add(ModBlocks.STRIPPED_GOLDEN_WOOD.get().asItem())
-//                .add(ModBlocks.GOLDEN_PLANK.get().asItem())
+                .add(ModBlocks.GOLDEN_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_GOLDEN_LOG.get().asItem())
+                .add(ModBlocks.GOLDEN_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_GOLDEN_WOOD.get().asItem())
                 ;
     }
 }

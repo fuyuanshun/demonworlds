@@ -1,10 +1,13 @@
 package com.fys.demonworlds.wordgen;
 
+import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.constants.ModConstants;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -28,6 +31,7 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> ORE_SUN_PLACED = registerKey("ore_sun_placed");
     public static final ResourceKey<PlacedFeature> ORE_END_PLACED = registerKey("ore_end_placed");
+    public static final ResourceKey<PlacedFeature> GOLDEN_TREE_PLACED = registerKey("golden_tree_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context){
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeature = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -46,6 +50,13 @@ public class ModPlacedFeatures {
                 ModOrePlacements.commonOrePlacement(30, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80)))
         );
 
+        register(
+                context,
+                GOLDEN_TREE_PLACED,
+                configuredFeature.getOrThrow(ModConfiguredFeatures.GOLDEN_TREE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.05f, 1),
+                        ModBlocks.GOLDEN_SAPLING.get())
+        );
     }
 
     /**

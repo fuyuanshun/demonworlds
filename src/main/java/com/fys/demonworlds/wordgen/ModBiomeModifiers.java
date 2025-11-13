@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.neoforged.neoforge.common.world.BiomeModifier;
@@ -24,6 +25,7 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_ORE_SUN = registerKey("add_ore_sun");
     public static final ResourceKey<BiomeModifier> ADD_ORE_END = registerKey("add_ore_end");
+    public static final ResourceKey<BiomeModifier> ADD_GOLDEN_TREE = registerKey("add_golden_tree");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context){
         HolderGetter<PlacedFeature> placedFeature = context.lookup(Registries.PLACED_FEATURE);
@@ -39,6 +41,12 @@ public class ModBiomeModifiers {
                 biome.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.ORE_END_PLACED)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+
+        context.register(ADD_GOLDEN_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biome.getOrThrow(Biomes.PLAINS)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.GOLDEN_TREE_PLACED)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
         ));
     }
 

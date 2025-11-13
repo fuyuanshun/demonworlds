@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 /**
  * @author fys
@@ -43,16 +44,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockWithItem(ModBlocks.GOLDEN_PLANK.get(), cubeAll(ModBlocks.GOLDEN_PLANK.get()));
 
-        simpleBlockWithItem(ModBlocks.GOLDEN_LEAVES.get(),
-                models().singleTexture(
-                            BuiltInRegistries.BLOCK.getKey(ModBlocks.GOLDEN_LEAVES.get()).getPath(),
-                            ResourceLocation.parse("minecraft:block/leaves"),
-                        "all", blockTexture(ModBlocks.GOLDEN_LEAVES.get())
-                        )
-                        .renderType("cutout"));
+        leavesBlock(ModBlocks.GOLDEN_LEAVES);
 
-        simpleBlock(ModBlocks.GOLDEN_SAPLING.get(),
-                models().cross(BuiltInRegistries.BLOCK.getKey(ModBlocks.GOLDEN_SAPLING.get()).getPath(),
-                        blockTexture(ModBlocks.GOLDEN_SAPLING.get())).renderType("cutout"));
+        saplingBlock(ModBlocks.GOLDEN_SAPLING);
+    }
+
+    public void leavesBlock(DeferredBlock<Block> block) {
+        simpleBlockWithItem(block.get(),
+                models().singleTexture(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(),
+                                ResourceLocation.parse("minecraft:block/leaves"),
+                                "all",
+                                blockTexture(block.get()))
+                        .renderType("cutout")
+        );
+    }
+
+    public void saplingBlock(DeferredBlock<Block> block) {
+        simpleBlock(block.get(),
+                models().cross(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(),
+                                blockTexture(block.get()))
+                        .renderType("cutout")
+        );
     }
 }

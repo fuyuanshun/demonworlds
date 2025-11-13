@@ -1,3 +1,8 @@
 {
-  "values": []
+  "values": [
+    "demonworlds:golden_log",
+    "demonworlds:stripped_golden_log",
+    "demonworlds:golden_wood",
+    "demonworlds:stripped_golden_wood"
+  ]
 }

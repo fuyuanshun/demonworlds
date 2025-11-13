@@ -71,11 +71,14 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         ;
 
         tag(BlockTags.LOGS_THAT_BURN)
-//                .add(ModBlocks.GOLDEN_LOG.get())
-//                .add(ModBlocks.STRIPPED_GOLDEN_LOG.get())
-//                .add(ModBlocks.GOLDEN_WOOD.get())
-//                .add(ModBlocks.STRIPPED_GOLDEN_WOOD.get())
-//                .add(ModBlocks.GOLDEN_PLANK.get())
+                .add(ModBlocks.GOLDEN_LOG.get())
+                .add(ModBlocks.STRIPPED_GOLDEN_LOG.get())
+                .add(ModBlocks.GOLDEN_WOOD.get())
+                .add(ModBlocks.STRIPPED_GOLDEN_WOOD.get())
+                ;
+
+        tag(BlockTags.PLANKS)
+                .add(ModBlocks.GOLDEN_PLANK.get())
                 ;
     }
 }
