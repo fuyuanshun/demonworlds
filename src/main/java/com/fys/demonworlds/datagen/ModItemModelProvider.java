@@ -1,4 +1,4 @@
-package com.fys.demonworlds.provider;
+package com.fys.demonworlds.datagen;
 
 import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.constants.ModConstants;
@@ -68,6 +68,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModBlocks.GOLDEN_SAPLING.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID,"block/" + ModBlocks.GOLDEN_SAPLING.getId().getPath()));
+
+        withExistingParent(ModItems.GECKO_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {

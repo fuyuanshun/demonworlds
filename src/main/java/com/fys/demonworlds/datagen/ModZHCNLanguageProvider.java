@@ -1,4 +1,4 @@
-package com.fys.demonworlds.provider;
+package com.fys.demonworlds.datagen;
 
 import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.constants.ModConstants;
@@ -60,6 +60,8 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         add(ModBlocks.GOLDEN_PLANK.get(), "黄金木板");
         add(ModBlocks.GOLDEN_LEAVES.get(), "黄金树叶");
         add(ModBlocks.GOLDEN_SAPLING.get(), "黄金树苗");
+        //刷怪蛋
+        add(ModItems.GECKO_EGG.get(), "草壁虎刷怪蛋");
         //物品描述
         add("item.demonworlds.demon_fruit_sun.desc", "\u00A76来自远古恶魔的诅咒-太阳之恶魔");
         add("item.demonworlds.demon_fruit_moon.desc", "\u00A76来自远古恶魔的诅咒-月亮之恶魔");

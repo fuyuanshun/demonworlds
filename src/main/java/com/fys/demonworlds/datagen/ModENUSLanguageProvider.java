@@ -1,4 +1,4 @@
-package com.fys.demonworlds.provider;
+package com.fys.demonworlds.datagen;
 
 import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.constants.ModConstants;
@@ -61,6 +61,8 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add(ModBlocks.GOLDEN_PLANK.get(), "golden plank");
         add(ModBlocks.GOLDEN_LEAVES.get(), "golden leaves");
         add(ModBlocks.GOLDEN_SAPLING.get(), "golden sapling");
+        //刷怪蛋
+        add(ModItems.GECKO_EGG.get(), "gecko spawn egg");
         //物品描述
         add("item.demonworlds.demon_fruit_sun.desc", "\u00A76Curse from the Ancient Demon - Sun Demon");
         add("item.demonworlds.demon_fruit_moon.desc", "\u00A76Curse from the Ancient Demon - Moon Demon");

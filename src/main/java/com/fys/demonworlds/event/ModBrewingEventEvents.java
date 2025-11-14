@@ -14,7 +14,7 @@ import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
  * @since 2025-11-01
  */
 @EventBusSubscriber(modid = ModConstants.MOD_ID)
-public class ModBrewingEventListener {
+public class ModBrewingEventEvents {
 
     /**
      * 酿造台-药水配方

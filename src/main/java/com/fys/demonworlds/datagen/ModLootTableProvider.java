@@ -1,4 +1,4 @@
-package com.fys.demonworlds.provider;
+package com.fys.demonworlds.datagen;
 
 import com.fys.demonworlds.block.ModBlocks;
 import net.minecraft.core.Holder;
@@ -10,7 +10,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;

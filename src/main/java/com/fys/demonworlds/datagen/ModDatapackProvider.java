@@ -1,4 +1,4 @@
-package com.fys.demonworlds.provider;
+package com.fys.demonworlds.datagen;
 
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.enchantment.ModEnchantments;

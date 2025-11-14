@@ -1,11 +1,13 @@
 package com.fys.demonworlds.item;
 
 import com.fys.demonworlds.constants.ModConstants;
+import com.fys.demonworlds.entity.ModEntityType;
 import com.fys.demonworlds.item.custom.*;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -47,6 +49,8 @@ public class ModItems {
     public static final DeferredItem<ArmorItem> END_CHESTPLATE = ITEMS.register("end_chestplate", () -> new ArmorItem(ModArmorMaterials.END, ArmorItem.Type.CHESTPLATE, new Item.Properties().fireResistant().durability(ArmorItem.Type.CHESTPLATE.getDurability(40))));
     public static final DeferredItem<ArmorItem> END_LEGGINS = ITEMS.register("end_leggings", () -> new ArmorItem(ModArmorMaterials.END, ArmorItem.Type.LEGGINGS, new Item.Properties().fireResistant().durability(ArmorItem.Type.LEGGINGS.getDurability(40))));
     public static final DeferredItem<ArmorItem> END_BOOTS = ITEMS.register("end_boots", () -> new ArmorItem(ModArmorMaterials.END, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(40))));
+
+    public static final DeferredItem<SpawnEggItem> GECKO_EGG = ITEMS.register("gecko_egg", ()->new DeferredSpawnEggItem(ModEntityType.GECKO, 0x0000af, 0xffac00, new Item.Properties()));
 
     //物品
     public static final DeferredItem<Item> MF = ITEMS.register("mf",

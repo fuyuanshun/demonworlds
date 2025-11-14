@@ -2,14 +2,9 @@ package com.fys.demonworlds.event;
 
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.item.ModItems;
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
 
 /**
@@ -18,7 +13,7 @@ import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
  * @description
  */
 @EventBusSubscriber(modid = ModConstants.MOD_ID, value = Dist.CLIENT)
-public class ModClientEventListener {
+public class ModClientEventEvents {
     @SubscribeEvent
     public static void onComputeFovModifyEvent(ComputeFovModifierEvent event) {
 

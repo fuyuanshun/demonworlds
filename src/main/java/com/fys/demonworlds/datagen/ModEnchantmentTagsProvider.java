@@ -1,8 +1,6 @@
-package com.fys.demonworlds.provider;
+package com.fys.demonworlds.datagen;
 
 import com.fys.demonworlds.constants.ModConstants;
-import com.fys.demonworlds.enchantment.ModEnchantments;
-import com.fys.demonworlds.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.EnchantmentTagsProvider;

@@ -89,6 +89,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GOLDEN_PLANK);
                         output.accept(ModBlocks.GOLDEN_LEAVES);
                         output.accept(ModBlocks.GOLDEN_SAPLING);
+                        output.accept(ModItems.GECKO_EGG);
                     })
                     .build());
 

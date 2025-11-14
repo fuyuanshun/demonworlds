@@ -19,7 +19,7 @@ import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
  * @description
  */
 @EventBusSubscriber(modid = ModConstants.MOD_ID)
-public class ModEventBusListener {
+public class ModEventBusEvents {
 
     @SubscribeEvent
     public static void onEntityRender(EntityRenderersEvent.RegisterLayerDefinitions event) {

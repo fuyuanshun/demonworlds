@@ -33,7 +33,7 @@ import java.util.UUID;
  * @since 2025-10-23
  */
 @EventBusSubscriber(modid = ModConstants.MOD_ID)
-public class ModMobEffectEventListener {
+public class ModMobEffectEventEvents {
 
     //用于存储玩家最后一个使用的物品，用来判断是否可以清楚特殊buff
     private static final Map<UUID, ItemStack> LAST_USE_ITEM_MAP = new HashMap<>();
