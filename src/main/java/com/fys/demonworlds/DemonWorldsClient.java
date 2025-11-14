@@ -1,7 +1,11 @@
 package com.fys.demonworlds;
 
 import com.fys.demonworlds.constants.ModConstants;
+import com.fys.demonworlds.entity.ModEntityType;
+import com.fys.demonworlds.entity.client.GeckoRenderer;
+import com.fys.demonworlds.entity.custom.GeckoEntity;
 import com.fys.demonworlds.item.ModItemProperties;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -21,5 +25,7 @@ public class DemonWorldsClient {
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
         ModItemProperties.addProperties();
+
+        EntityRenderers.register(ModEntityType.GECKO.get(), GeckoRenderer::new);
     }
 }

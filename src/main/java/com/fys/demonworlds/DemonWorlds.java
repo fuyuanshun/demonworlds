@@ -5,6 +5,7 @@ import com.fys.demonworlds.block.component.ModDataComponents;
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.effect.ModMobEffects;
 import com.fys.demonworlds.enchantment.ModEnchantmentEffects;
+import com.fys.demonworlds.entity.ModEntityType;
 import com.fys.demonworlds.item.ModCreativeModeTabs;
 import com.fys.demonworlds.item.ModItems;
 import com.fys.demonworlds.potion.ModPotions;
@@ -38,6 +39,7 @@ public class DemonWorlds {
         ModDataComponents.register(modEventBus);
         //自定义附魔
         ModEnchantmentEffects.registerEnchantment(modEventBus);
+        ModEntityType.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
