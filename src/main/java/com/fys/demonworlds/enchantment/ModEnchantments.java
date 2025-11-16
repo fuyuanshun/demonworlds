@@ -1,6 +1,7 @@
 package com.fys.demonworlds.enchantment;
 
 import com.fys.demonworlds.constants.ModConstants;
+import com.fys.demonworlds.enchantment.custom.LightningEnchantment;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -12,6 +13,8 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
+import net.minecraft.world.item.enchantment.EnchantmentTarget;
 
 /**
  * @author fys
@@ -43,6 +46,13 @@ public class ModEnchantments {
                 )
                 //与攻击附魔冲突
                 .exclusiveWith(enchantmentHolderGetter.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE))
+                //附魔的效果
+                    .withEffect(
+                            EnchantmentEffectComponents.POST_ATTACK,
+                            EnchantmentTarget.ATTACKER,
+                            EnchantmentTarget.VICTIM,
+                            new LightningEnchantment()
+                    )
         );
     }
 
