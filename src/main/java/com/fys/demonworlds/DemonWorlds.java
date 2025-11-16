@@ -38,7 +38,7 @@ public class DemonWorlds {
         //自定义数据组件
         ModDataComponents.register(modEventBus);
         //自定义附魔
-        ModEnchantmentEffects.registerEnchantment(modEventBus);
+        ModEnchantmentEffects.register(modEventBus);
         ModEntityType.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);

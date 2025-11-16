@@ -10,22 +10,17 @@ import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
 import net.minecraft.world.phys.Vec3;
 
 /**
- * 自定义附魔效果
  * @author fys
- * @date 2025/10/26
- * @description
+ * @since 2025-11-16
  */
-public record LightningEnchantmentEffect() implements EnchantmentEntityEffect {
+public class LightningEnchantment implements EnchantmentEntityEffect {
 
-    public static final MapCodec<? extends LightningEnchantmentEffect> CODEC = MapCodec.unit(LightningEnchantmentEffect::new);
+    public static final MapCodec<? extends EnchantmentEntityEffect> CODEC
+             = MapCodec.unit(LightningEnchantment::new);
 
     @Override
     public void apply(ServerLevel level, int enchantmentLevel, EnchantedItemInUse item, Entity entity, Vec3 origin) {
         if(enchantmentLevel == 1){
-            EntityType.LIGHTNING_BOLT.spawn(level, entity.getOnPos(), MobSpawnType.TRIGGERED);
-        } else if(enchantmentLevel == 2){
-            EntityType.LIGHTNING_BOLT.spawn(level, entity.getOnPos(), MobSpawnType.TRIGGERED);
-            EntityType.LIGHTNING_BOLT.spawn(level, entity.getOnPos(), MobSpawnType.TRIGGERED);
             EntityType.LIGHTNING_BOLT.spawn(level, entity.getOnPos(), MobSpawnType.TRIGGERED);
         }
     }
@@ -34,5 +29,4 @@ public record LightningEnchantmentEffect() implements EnchantmentEntityEffect {
     public MapCodec<? extends EnchantmentEntityEffect> codec() {
         return CODEC;
     }
-
 }
