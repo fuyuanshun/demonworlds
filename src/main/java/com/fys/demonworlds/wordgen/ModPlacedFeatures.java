@@ -19,7 +19,7 @@ import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import java.util.List;
 
 /**
- * 参考 OrePlacements 类
+ * 参考 OrePlacements 类 PlacementUtils类
  *
  * 定义 “在何处生成”
  *

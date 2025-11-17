@@ -35,7 +35,7 @@ import java.util.OptionalInt;
 /**
  *
  * 定义 生成规则
- *
+ * 参考原版类：FeatureUtils
  * @author fys
  * @date 2025/10/27
  * @description
