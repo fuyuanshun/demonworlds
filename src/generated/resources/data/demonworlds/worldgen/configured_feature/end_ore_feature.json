@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "demonworlds:sun_ore"
+          "Name": "demonworlds:end_ore"
         },
         "target": {
           "block": "minecraft:end_stone",

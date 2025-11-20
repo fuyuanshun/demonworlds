@@ -1,9 +1,9 @@
 {
-  "feature": "demonworlds:sun_ore_key",
+  "feature": "demonworlds:end_ore_feature",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 30
+      "count": 9
     },
     {
       "type": "minecraft:in_square"
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 80
+          "absolute": 40
         },
         "min_inclusive": {
-          "absolute": -64
+          "above_bottom": 0
         }
       }
     },

@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "demonworlds:ore_sun_placed",
+  "features": "demonworlds:sun_ore_placed",
   "step": "underground_ores"
 }
