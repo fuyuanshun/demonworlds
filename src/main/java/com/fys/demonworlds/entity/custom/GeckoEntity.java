@@ -3,9 +3,13 @@ package com.fys.demonworlds.entity.custom;
 import com.fys.demonworlds.entity.ModEntityType;
 import com.fys.demonworlds.item.ModItems;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.BossEvent;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -24,6 +28,8 @@ public class GeckoEntity extends Animal {
 
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+
+    private final ServerBossEvent serverBossEvent = new ServerBossEvent(Component.nullToEmpty("壁虎之王"), BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.PROGRESS);
 
     public GeckoEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
@@ -80,5 +86,23 @@ public class GeckoEntity extends Animal {
                 .add(Attributes.MAX_HEALTH, 10d)
                 .add(Attributes.MOVEMENT_SPEED, 0.25D)
                 .add(Attributes.FOLLOW_RANGE, 24D);
+    }
+
+    @Override
+    public void startSeenByPlayer(ServerPlayer serverPlayer) {
+        super.startSeenByPlayer(serverPlayer);
+        serverBossEvent.addPlayer(serverPlayer);
+    }
+
+    @Override
+    public void stopSeenByPlayer(ServerPlayer serverPlayer) {
+        super.stopSeenByPlayer(serverPlayer);
+        serverBossEvent.removePlayer(serverPlayer);
+    }
+
+    @Override
+    public void aiStep() {
+        super.aiStep();
+        serverBossEvent.setProgress(this.getHealth() / this.getMaxHealth());
     }
 }

@@ -56,7 +56,7 @@ public class ModBiomeModifiers {
 
         context.register(SPAWN_GECKO, new BiomeModifiers.AddSpawnsBiomeModifier(
            HolderSet.direct(biome.getOrThrow(Biomes.PLAINS)),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntityType.GECKO.get(), 20, 2, 4))
+                List.of(new MobSpawnSettings.SpawnerData(ModEntityType.GECKO.get(), 20, 1, 1))
         ));
     }
 
