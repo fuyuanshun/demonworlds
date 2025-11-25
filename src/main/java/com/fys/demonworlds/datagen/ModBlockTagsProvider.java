@@ -70,14 +70,21 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         ;
 
         tag(BlockTags.LOGS_THAT_BURN)
+                //黄金树
                 .add(ModBlocks.GOLDEN_LOG.get())
                 .add(ModBlocks.STRIPPED_GOLDEN_LOG.get())
                 .add(ModBlocks.GOLDEN_WOOD.get())
                 .add(ModBlocks.STRIPPED_GOLDEN_WOOD.get())
+                //钻石树
+                .add(ModBlocks.DIAMOND_LOG.get())
+                .add(ModBlocks.STRIPPED_DIAMOND_LOG.get())
+                .add(ModBlocks.DIAMOND_WOOD.get())
+                .add(ModBlocks.STRIPPED_DIAMOND_WOOD.get())
                 ;
 
         tag(BlockTags.PLANKS)
                 .add(ModBlocks.GOLDEN_PLANK.get())
+                .add(ModBlocks.DIAMOND_PLANK.get())
                 ;
     }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "demonworlds:block/stripped_diamond_log_top",
+    "side": "demonworlds:block/stripped_diamond_log"
+  }
+}

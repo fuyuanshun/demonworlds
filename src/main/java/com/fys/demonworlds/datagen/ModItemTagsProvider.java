@@ -42,14 +42,25 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.WEAPON_ENCHANTABLE)
                 .add(ModItems.END_SWORD.get())
                 ;
+
         tag(ItemTags.SWORD_ENCHANTABLE)
                 .add(ModItems.END_SWORD.get());
 
+        tag(ItemTags.AXES)
+                .add(ModItems.END_AXE.get())
+        ;
+
         tag(ItemTags.LOGS_THAT_BURN)
+                //黄金树
                 .add(ModBlocks.GOLDEN_LOG.get().asItem())
                 .add(ModBlocks.STRIPPED_GOLDEN_LOG.get().asItem())
                 .add(ModBlocks.GOLDEN_WOOD.get().asItem())
                 .add(ModBlocks.STRIPPED_GOLDEN_WOOD.get().asItem())
+                //钻石树
+                .add(ModBlocks.DIAMOND_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_DIAMOND_LOG.get().asItem())
+                .add(ModBlocks.DIAMOND_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_DIAMOND_WOOD.get().asItem())
                 ;
     }
 }

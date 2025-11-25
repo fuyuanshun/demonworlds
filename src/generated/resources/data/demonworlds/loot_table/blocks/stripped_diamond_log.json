@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "demonworlds:stripped_diamond_log"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "demonworlds:blocks/stripped_diamond_log"
+}

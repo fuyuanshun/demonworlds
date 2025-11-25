@@ -3,8 +3,8 @@
   "biomes": "minecraft:plains",
   "spawners": {
     "type": "demonworlds:gecko",
-    "maxCount": 4,
-    "minCount": 2,
+    "maxCount": 1,
+    "minCount": 1,
     "weight": 20
   }
 }

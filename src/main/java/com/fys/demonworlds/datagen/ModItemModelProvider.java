@@ -10,9 +10,11 @@ import net.minecraft.server.packs.PackType;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.LinkedHashMap;
@@ -65,11 +67,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         //燃料
         basicItem(ModItems.DARK_DUST.get());
 
-        withExistingParent(ModBlocks.GOLDEN_SAPLING.getId().getPath(),
-                ResourceLocation.parse("item/generated")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID,"block/" + ModBlocks.GOLDEN_SAPLING.getId().getPath()));
+        leaveTexture(ModBlocks.GOLDEN_SAPLING);
+
+        leaveTexture(ModBlocks.DIAMOND_SAPLING);
 
         withExistingParent(ModItems.GECKO_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+    }
+
+    private void leaveTexture(DeferredBlock<Block> sapling){
+        withExistingParent(sapling.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(ModConstants.MOD_ID,"block/" + sapling.getId().getPath()));
+
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {

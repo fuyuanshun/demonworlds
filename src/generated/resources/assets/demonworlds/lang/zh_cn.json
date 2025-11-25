@@ -1,4 +1,9 @@
 {
+  "block.demonworlds.diamond_leaves": "钻石树叶",
+  "block.demonworlds.diamond_log": "钻石原木",
+  "block.demonworlds.diamond_plank": "钻石木板",
+  "block.demonworlds.diamond_sapling": "钻石树苗",
+  "block.demonworlds.diamond_wood": "钻石木",
   "block.demonworlds.end_block": "末影石",
   "block.demonworlds.end_ore": "末影原矿",
   "block.demonworlds.golden_leaves": "黄金树叶",
@@ -7,6 +12,8 @@
   "block.demonworlds.golden_sapling": "黄金树苗",
   "block.demonworlds.golden_wood": "黄金木",
   "block.demonworlds.simple_block": "神奇的方块",
+  "block.demonworlds.stripped_diamond_log": "去皮钻石原木",
+  "block.demonworlds.stripped_diamond_wood": "去皮钻石木",
   "block.demonworlds.stripped_golden_log": "去皮黄金原木",
   "block.demonworlds.stripped_golden_wood": "去皮黄金木",
   "block.demonworlds.sun_block": "太阳石",

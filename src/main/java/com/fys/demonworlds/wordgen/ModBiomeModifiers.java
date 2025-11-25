@@ -30,6 +30,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_ORE_SUN = registerKey("add_ore_sun");
     public static final ResourceKey<BiomeModifier> ADD_ORE_END = registerKey("add_ore_end");
     public static final ResourceKey<BiomeModifier> ADD_GOLDEN_TREE = registerKey("add_golden_tree");
+    public static final ResourceKey<BiomeModifier> ADD_DIAMOND_TREE = registerKey("add_diamond_tree");
     public static final ResourceKey<BiomeModifier> SPAWN_GECKO = registerKey("spawn_gecko");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context){
@@ -51,6 +52,12 @@ public class ModBiomeModifiers {
         context.register(ADD_GOLDEN_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biome.getOrThrow(Biomes.PLAINS)),
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.GOLDEN_TREE_PLACED)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+
+        context.register(ADD_DIAMOND_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biome.getOrThrow(Biomes.PLAINS)),
+                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.DIAMOND_TREE_PLACED)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
 

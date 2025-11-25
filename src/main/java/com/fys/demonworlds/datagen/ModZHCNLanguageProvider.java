@@ -52,7 +52,7 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         add(ModBlocks.END_BLOCK.get(), "末影石");
         add(ModBlocks.END_ORE.get(), "末影原矿");
         add(ModBlocks.SIMPLE_BLOCK.get(), "神奇的方块");
-        //树
+        //黄金树
         add(ModBlocks.GOLDEN_LOG.get(), "黄金原木");
         add(ModBlocks.STRIPPED_GOLDEN_LOG.get(), "去皮黄金原木");
         add(ModBlocks.GOLDEN_WOOD.get(), "黄金木");
@@ -60,6 +60,14 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         add(ModBlocks.GOLDEN_PLANK.get(), "黄金木板");
         add(ModBlocks.GOLDEN_LEAVES.get(), "黄金树叶");
         add(ModBlocks.GOLDEN_SAPLING.get(), "黄金树苗");
+        //钻石树
+        add(ModBlocks.DIAMOND_LOG.get(), "钻石原木");
+        add(ModBlocks.STRIPPED_DIAMOND_LOG.get(), "去皮钻石原木");
+        add(ModBlocks.DIAMOND_WOOD.get(), "钻石木");
+        add(ModBlocks.STRIPPED_DIAMOND_WOOD.get(), "去皮钻石木");
+        add(ModBlocks.DIAMOND_PLANK.get(), "钻石木板");
+        add(ModBlocks.DIAMOND_LEAVES.get(), "钻石树叶");
+        add(ModBlocks.DIAMOND_SAPLING.get(), "钻石树苗");
         //刷怪蛋
         add(ModItems.GECKO_EGG.get(), "草壁虎刷怪蛋");
         //物品描述

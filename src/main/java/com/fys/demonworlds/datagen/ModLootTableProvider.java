@@ -46,6 +46,14 @@ public class ModLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.GOLDEN_SAPLING.get());
         //树叶掉落树苗
         add(ModBlocks.GOLDEN_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.GOLDEN_SAPLING.get(), new float[]{0.05F, 0.0625F, 0.083333336F, 0.1F}));
+
+        dropSelf(ModBlocks.DIAMOND_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_DIAMOND_LOG.get());
+        dropSelf(ModBlocks.DIAMOND_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_DIAMOND_WOOD.get());
+        dropSelf(ModBlocks.DIAMOND_PLANK.get());
+        dropSelf(ModBlocks.DIAMOND_SAPLING.get());
+        add(ModBlocks.DIAMOND_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.DIAMOND_SAPLING.get(), new float[]{0.05F, 0.0625F, 0.083333336F, 0.1F}));
     }
 
     /**

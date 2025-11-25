@@ -3,6 +3,10 @@
     "demonworlds:golden_log",
     "demonworlds:stripped_golden_log",
     "demonworlds:golden_wood",
-    "demonworlds:stripped_golden_wood"
+    "demonworlds:stripped_golden_wood",
+    "demonworlds:diamond_log",
+    "demonworlds:stripped_diamond_log",
+    "demonworlds:diamond_wood",
+    "demonworlds:stripped_diamond_wood"
   ]
 }

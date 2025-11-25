@@ -15,6 +15,9 @@ import java.util.Optional;
 public class ModTreeGrowers {
 
     public static final TreeGrower GOLDEN_TREE = new TreeGrower(ModConstants.MOD_ID+":golden_tree",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.GOLDEN_TREE_KEY), Optional.empty());
+
+    public static final TreeGrower DIAMOND_TREE = new TreeGrower(ModConstants.MOD_ID+":diamond_tree",
             Optional.empty(), Optional.of(ModConfiguredFeatures.GOLDEN_TREE_KEY), Optional.empty());;
 
 }
