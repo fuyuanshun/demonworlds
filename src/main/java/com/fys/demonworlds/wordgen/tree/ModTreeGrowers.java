@@ -2,7 +2,6 @@ package com.fys.demonworlds.wordgen.tree;
 
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.wordgen.ModConfiguredFeatures;
-import net.minecraft.data.worldgen.features.TreeFeatures;
 import net.minecraft.world.level.block.grower.TreeGrower;
 
 import java.util.Optional;
@@ -18,6 +17,8 @@ public class ModTreeGrowers {
             Optional.empty(), Optional.of(ModConfiguredFeatures.GOLDEN_TREE_KEY), Optional.empty());
 
     public static final TreeGrower DIAMOND_TREE = new TreeGrower(ModConstants.MOD_ID+":diamond_tree",
-            Optional.empty(), Optional.of(ModConfiguredFeatures.GOLDEN_TREE_KEY), Optional.empty());;
+            Optional.empty(), Optional.of(ModConfiguredFeatures.DIAMOND_TREE_KEY), Optional.empty());
 
+    public static final TreeGrower LIGHTNING_TREE = new TreeGrower(ModConstants.MOD_ID+":lightning_tree",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.LIGHTNING_TREE_KEY), Optional.empty());
 }

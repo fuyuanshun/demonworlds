@@ -39,6 +39,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_ORE_KEY = registerKey("end_ore_key");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GOLDEN_TREE_KEY = registerKey("golden_tree_key");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DIAMOND_TREE_KEY = registerKey("diamond_tree_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIGHTNING_TREE_KEY = registerKey("lightning_tree_key");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context){
         RuleTest stoneReplace = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -71,6 +72,15 @@ public class ModConfiguredFeatures {
                 //
                 new BlobFoliagePlacer(ConstantInt.of(4), ConstantInt.of(1), 3),
                 new ThreeLayersFeatureSize(1, 1, 0, 1, 1, OptionalInt.empty())
+        ).build());
+
+        //闪电树 - 高耸树木 (32 + random 0~10 + random 0~8 = 32~50格)
+        register(context, LIGHTNING_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.LIGHTNING_LOG.get()),
+                new StraightTrunkPlacer(32, 10, 8),
+                BlockStateProvider.simple(ModBlocks.LIGHTNING_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(5), ConstantInt.of(2), 4),
+                new ThreeLayersFeatureSize(1, 1, 2, 2, 1, OptionalInt.empty())
         ).build());
     }
 

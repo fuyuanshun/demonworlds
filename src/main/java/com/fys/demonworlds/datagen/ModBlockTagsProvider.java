@@ -80,11 +80,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_DIAMOND_LOG.get())
                 .add(ModBlocks.DIAMOND_WOOD.get())
                 .add(ModBlocks.STRIPPED_DIAMOND_WOOD.get())
+                //闪电树
+                .add(ModBlocks.LIGHTNING_LOG.get())
+                .add(ModBlocks.STRIPPED_LIGHTNING_LOG.get())
+                .add(ModBlocks.LIGHTNING_WOOD.get())
+                .add(ModBlocks.STRIPPED_LIGHTNING_WOOD.get())
                 ;
 
         tag(BlockTags.PLANKS)
                 .add(ModBlocks.GOLDEN_PLANK.get())
                 .add(ModBlocks.DIAMOND_PLANK.get())
+                .add(ModBlocks.LIGHTNING_PLANK.get())
                 ;
     }
 }

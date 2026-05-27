@@ -71,6 +71,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         leaveTexture(ModBlocks.DIAMOND_SAPLING);
 
+        leaveTexture(ModBlocks.LIGHTNING_SAPLING);
+
         withExistingParent(ModItems.GECKO_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 

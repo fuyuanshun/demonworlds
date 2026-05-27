@@ -7,6 +7,10 @@
     "demonworlds:diamond_log",
     "demonworlds:stripped_diamond_log",
     "demonworlds:diamond_wood",
-    "demonworlds:stripped_diamond_wood"
+    "demonworlds:stripped_diamond_wood",
+    "demonworlds:lightning_log",
+    "demonworlds:stripped_lightning_log",
+    "demonworlds:lightning_wood",
+    "demonworlds:stripped_lightning_wood"
   ]
 }

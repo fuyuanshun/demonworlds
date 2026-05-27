@@ -89,6 +89,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GOLDEN_PLANK);
                         output.accept(ModBlocks.GOLDEN_LEAVES);
                         output.accept(ModBlocks.GOLDEN_SAPLING);
+                        //闪电树
+                        output.accept(ModBlocks.LIGHTNING_LOG);
+                        output.accept(ModBlocks.STRIPPED_LIGHTNING_LOG);
+                        output.accept(ModBlocks.LIGHTNING_WOOD);
+                        output.accept(ModBlocks.STRIPPED_LIGHTNING_WOOD);
+                        output.accept(ModBlocks.LIGHTNING_PLANK);
+                        output.accept(ModBlocks.LIGHTNING_LEAVES);
+                        output.accept(ModBlocks.LIGHTNING_SAPLING);
                         output.accept(ModItems.GECKO_EGG);
                     })
                     .build());

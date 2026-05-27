@@ -2,6 +2,7 @@ package com.fys.demonworlds.block;
 
 import com.fys.demonworlds.block.custom.GoldenTree;
 import com.fys.demonworlds.block.custom.DiamondTree;
+import com.fys.demonworlds.block.custom.LightningTree;
 import com.fys.demonworlds.block.custom.SimpleBlock;
 import com.fys.demonworlds.constants.ModConstants;
 import com.fys.demonworlds.item.ModItems;
@@ -54,7 +55,17 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> DIAMOND_PLANK = register("diamond_plank", Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
     public static final DeferredBlock<Block> DIAMOND_LEAVES = register("diamond_leaves", Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES));
-    public static final DeferredBlock<Block> DIAMOND_SAPLING = register("diamond_sapling", ()->new SaplingBlock(ModTreeGrowers.DIAMOND_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> DIAMOND_SAPLING = register("diamond_sapling", () -> new SaplingBlock(ModTreeGrowers.DIAMOND_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
+    //闪电树
+    public static final DeferredBlock<Block> LIGHTNING_LOG = register("lightning_log", LightningTree::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG));
+    public static final DeferredBlock<Block> STRIPPED_LIGHTNING_LOG = register("stripped_lightning_log", LightningTree::new, BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG));
+    public static final DeferredBlock<Block> LIGHTNING_WOOD = register("lightning_wood", LightningTree::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD));
+    public static final DeferredBlock<Block> STRIPPED_LIGHTNING_WOOD = register("stripped_lightning_wood", LightningTree::new, BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD));
+
+    public static final DeferredBlock<Block> LIGHTNING_PLANK = register("lightning_plank", Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS));
+    public static final DeferredBlock<Block> LIGHTNING_LEAVES = register("lightning_leaves", Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES));
+    public static final DeferredBlock<Block> LIGHTNING_SAPLING = register("lightning_sapling", () -> new SaplingBlock(ModTreeGrowers.LIGHTNING_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
     public static DeferredBlock<Block> register(String name, Function<BlockBehaviour.Properties, ? extends Block> func, BlockBehaviour.Properties block){
         DeferredBlock<Block> deferredBlock = BLOCKS.registerBlock(name, func, block);

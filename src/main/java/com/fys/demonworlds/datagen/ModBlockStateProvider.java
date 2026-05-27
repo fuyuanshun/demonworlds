@@ -62,6 +62,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.DIAMOND_LEAVES);
 
         saplingBlock(ModBlocks.DIAMOND_SAPLING);
+        //闪电树
+        logBlock((RotatedPillarBlock) ModBlocks.LIGHTNING_LOG.get());
+        logBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHTNING_LOG.get());
+        axisBlock((RotatedPillarBlock) ModBlocks.LIGHTNING_WOOD.get(), blockTexture(ModBlocks.LIGHTNING_LOG.get()), blockTexture(ModBlocks.LIGHTNING_LOG.get()));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHTNING_WOOD.get(), blockTexture(ModBlocks.STRIPPED_LIGHTNING_LOG.get()), blockTexture(ModBlocks.STRIPPED_LIGHTNING_LOG.get()));
+
+        blockWithItem(ModBlocks.LIGHTNING_LOG);
+        blockWithItem(ModBlocks.STRIPPED_LIGHTNING_LOG);
+        blockWithItem(ModBlocks.LIGHTNING_WOOD);
+        blockWithItem(ModBlocks.STRIPPED_LIGHTNING_WOOD);
+
+        simpleBlockWithItem(ModBlocks.LIGHTNING_PLANK.get(), cubeAll(ModBlocks.LIGHTNING_PLANK.get()));
+
+        leavesBlock(ModBlocks.LIGHTNING_LEAVES);
+
+        saplingBlock(ModBlocks.LIGHTNING_SAPLING);
     }
 
     public void blockWithItem(DeferredBlock<Block> block){

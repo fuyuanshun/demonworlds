@@ -68,6 +68,14 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         add(ModBlocks.DIAMOND_PLANK.get(), "钻石木板");
         add(ModBlocks.DIAMOND_LEAVES.get(), "钻石树叶");
         add(ModBlocks.DIAMOND_SAPLING.get(), "钻石树苗");
+        //闪电树
+        add(ModBlocks.LIGHTNING_LOG.get(), "闪电原木");
+        add(ModBlocks.STRIPPED_LIGHTNING_LOG.get(), "去皮闪电原木");
+        add(ModBlocks.LIGHTNING_WOOD.get(), "闪电木");
+        add(ModBlocks.STRIPPED_LIGHTNING_WOOD.get(), "去皮闪电木");
+        add(ModBlocks.LIGHTNING_PLANK.get(), "闪电木板");
+        add(ModBlocks.LIGHTNING_LEAVES.get(), "闪电树叶");
+        add(ModBlocks.LIGHTNING_SAPLING.get(), "闪电树苗");
         //刷怪蛋
         add(ModItems.GECKO_EGG.get(), "草壁虎刷怪蛋");
         //物品描述

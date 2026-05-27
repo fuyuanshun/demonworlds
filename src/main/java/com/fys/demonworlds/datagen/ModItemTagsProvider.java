@@ -61,6 +61,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModBlocks.STRIPPED_DIAMOND_LOG.get().asItem())
                 .add(ModBlocks.DIAMOND_WOOD.get().asItem())
                 .add(ModBlocks.STRIPPED_DIAMOND_WOOD.get().asItem())
+                //闪电树
+                .add(ModBlocks.LIGHTNING_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_LIGHTNING_LOG.get().asItem())
+                .add(ModBlocks.LIGHTNING_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_LIGHTNING_WOOD.get().asItem())
                 ;
     }
 }

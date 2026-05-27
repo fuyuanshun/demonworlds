@@ -61,6 +61,22 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add(ModBlocks.GOLDEN_PLANK.get(), "golden plank");
         add(ModBlocks.GOLDEN_LEAVES.get(), "golden leaves");
         add(ModBlocks.GOLDEN_SAPLING.get(), "golden sapling");
+        //钻石树
+        add(ModBlocks.DIAMOND_LOG.get(), "diamond log");
+        add(ModBlocks.STRIPPED_DIAMOND_LOG.get(), "stripped diamond log");
+        add(ModBlocks.DIAMOND_WOOD.get(), "diamond wood");
+        add(ModBlocks.STRIPPED_DIAMOND_WOOD.get(), "stripped diamond wood");
+        add(ModBlocks.DIAMOND_PLANK.get(), "diamond plank");
+        add(ModBlocks.DIAMOND_LEAVES.get(), "diamond leaves");
+        add(ModBlocks.DIAMOND_SAPLING.get(), "diamond sapling");
+        //闪电树
+        add(ModBlocks.LIGHTNING_LOG.get(), "lightning log");
+        add(ModBlocks.STRIPPED_LIGHTNING_LOG.get(), "stripped lightning log");
+        add(ModBlocks.LIGHTNING_WOOD.get(), "lightning wood");
+        add(ModBlocks.STRIPPED_LIGHTNING_WOOD.get(), "stripped lightning wood");
+        add(ModBlocks.LIGHTNING_PLANK.get(), "lightning plank");
+        add(ModBlocks.LIGHTNING_LEAVES.get(), "lightning leaves");
+        add(ModBlocks.LIGHTNING_SAPLING.get(), "lightning sapling");
         //刷怪蛋
         add(ModItems.GECKO_EGG.get(), "gecko spawn egg");
         //物品描述

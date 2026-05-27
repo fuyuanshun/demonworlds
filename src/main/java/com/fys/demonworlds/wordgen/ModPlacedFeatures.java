@@ -33,6 +33,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ORE_END_PLACED = registerKey("ore_end_placed");
     public static final ResourceKey<PlacedFeature> GOLDEN_TREE_PLACED = registerKey("golden_tree_placed");
     public static final ResourceKey<PlacedFeature> DIAMOND_TREE_PLACED = registerKey("diamond_tree_placed");
+    public static final ResourceKey<PlacedFeature> LIGHTNING_TREE_PLACED = registerKey("lightning_tree_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context){
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeature = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -65,6 +66,14 @@ public class ModPlacedFeatures {
                 configuredFeature.getOrThrow(ModConfiguredFeatures.DIAMOND_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.05f, 1),
                         ModBlocks.DIAMOND_SAPLING.get())
+        );
+
+        register(
+                context,
+                LIGHTNING_TREE_PLACED,
+                configuredFeature.getOrThrow(ModConfiguredFeatures.LIGHTNING_TREE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(2, 0.1f, 1),
+                        ModBlocks.LIGHTNING_SAPLING.get())
         );
     }
 
