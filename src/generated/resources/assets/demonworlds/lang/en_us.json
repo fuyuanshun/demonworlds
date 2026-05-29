@@ -56,5 +56,8 @@
   "itemGroup.demon_worlds_equipment": "demon worlds: equipment",
   "itemGroup.demon_worlds_fruit": "demon worlds：fruit",
   "itemGroup.demon_worlds_misc": "demon worlds：misc",
-  "itemGroup.demon_worlds_tool": "demon worlds: tool"
+  "itemGroup.demon_worlds_tool": "demon worlds: tool",
+  "key.categories.demonworlds": "Demon Worlds",
+  "key.demonworlds.elytra_slot": "Equip/Unequip Elytra",
+  "slot.demonworlds.elytra": "Elytra Slot"
 }

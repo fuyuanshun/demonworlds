@@ -93,5 +93,9 @@ public class ModZHCNLanguageProvider extends LanguageProvider {
         add("item.minecraft.lingering_potion.effect.slime_potion", "滞留史莱姆药水");
         //附魔
         add("enchantment.demonworlds.lightning_enchantment", "雷电附加");
+        //鞘翅栏
+        add("slot.demonworlds.elytra", "鞘翅栏");
+        add("key.demonworlds.elytra_slot", "装上/卸下鞘翅");
+        add("key.categories.demonworlds", "恶魔世界");
     }
 }

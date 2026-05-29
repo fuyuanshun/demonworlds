@@ -94,5 +94,9 @@ public class ModENUSLanguageProvider extends LanguageProvider {
         add("item.minecraft.lingering_potion.effect.slime_potion", "lingering slime potion");
         //附魔
         add("enchantment.demonworlds.lightning_enchantment", "lightning additional");
+        //鞘翅栏
+        add("slot.demonworlds.elytra", "Elytra Slot");
+        add("key.demonworlds.elytra_slot", "Equip/Unequip Elytra");
+        add("key.categories.demonworlds", "Demon Worlds");
     }
 }

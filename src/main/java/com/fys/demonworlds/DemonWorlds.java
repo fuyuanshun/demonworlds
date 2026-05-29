@@ -1,5 +1,6 @@
 package com.fys.demonworlds;
 
+import com.fys.demonworlds.attachment.ModAttachments;
 import com.fys.demonworlds.block.ModBlocks;
 import com.fys.demonworlds.block.component.ModDataComponents;
 import com.fys.demonworlds.constants.ModConstants;
@@ -40,6 +41,8 @@ public class DemonWorlds {
         //自定义附魔
         ModEnchantmentEffects.registerEnchantment(modEventBus);
         ModEntityType.register(modEventBus);
+        //自定义附件（鞘翅栏等）
+        ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
